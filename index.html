@@ -693,7 +693,8 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log(artistNameSongImage)
                                 
                                 // Getting nowPlaying from Last FM
-                                var nowPlayingB = track['@attr'].nowplaying
+                                
+                                var nowPlayingB = (track['@attr']) ? true : false
                                 console.log("accessing Getting nowPlaying")
                                 console.log(nowPlayingB)
                     
