@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="beta"></div>
+
+<script>
+
+
+function UserAction() {
+          var request = new XMLHttpRequest();
+          // https://api.trakt.tv/users/id/history/type/item_id?start_at=2016-06-01T00%3A00%3A00.000Z&end_at=2016-07-01T23%3A59%3A59.000Z
+
+          var url2 = "https://api.trakt.tv/users/sean/history/movies/123"
+          var url3 = "https://api.trakt.tv/users/sensehack/history/type/item_id?start_at=start_at&end_at=end_at"
+          var url = "https://api.trakt.tv/users/sean/stats"
+          
+          var corsUrl = "https://cors.io/?http://api.trakt.tv/users/sean/stats"
+
+          request.open('GET', corsUrl);
+
+          request.setRequestHeader('Content-Type', 'application/json');
+          request.setRequestHeader('trakt-api-version', '2');
+          request.setRequestHeader('trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f');
+
+          request.onreadystatechange = function () {
+            if (this.readyState === 4) {
+              console.log('Status:', this.status);
+              console.log('Headers:', this.getAllResponseHeaders());
+              console.log('Body:', this.responseText);
+            }
+          };
+
+          request.send();
+
+
+
+}
+
+</script>
+
+<button type="submit" onclick="UserAction()">Search</button>
+
+</body>
+</html>
