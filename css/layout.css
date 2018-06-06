@@ -802,6 +802,19 @@ call-to-action .button {
 }
 
 
+.portfolio-item .lastFMArtistAndSongImageText { padding: 18px }
+.portfolio-item .lastFMArtistAndSongImageText h5 {
+  font: 18px/29px 'opensans-bold', sans-serif;
+  color: rgb(135, 227, 93);
+}
+.portfolio-item .lastFMArtistAndSongImageText p {
+  font: 18px/26px 'opensans-regular', sans-serif;
+  color: #da2750;
+  margin-bottom: 0;
+}
+
+
+
 /* ------------------------------------------------------------------ */
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
