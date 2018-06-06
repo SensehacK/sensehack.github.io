@@ -16,7 +16,7 @@
     var namespace = slider.vars.namespace,
         msGesture = window.navigator && window.navigator.msPointerEnabled && window.MSGesture,
         touch = (( "ontouchstart" in window ) || msGesture || window.DocumentTouch && document instanceof DocumentTouch) && slider.vars.touch,
-        // depricating this idea, as devices are being released with both of these events
+        // deprecating this idea, as devices are being released with both of these events
         //eventType = (touch) ? "touchend" : "click",
         eventType = "click touchend MSPointerUp",
         watchedEvent = "",
