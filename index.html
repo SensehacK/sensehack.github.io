@@ -297,7 +297,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/coffee.jpg">
+                        <img id="albumSongImage1" alt="" src="images/portfolio/coffee.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Coffee</h5>
@@ -674,6 +674,9 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("Finally was able to access the json data")
                                 console.log("Thanks to Debashis")
 
+
+
+                                // Getting accessing artists from Last FM
                                 var track = jsonResponse.recenttracks.track[0]
                                 console.log("printing url 2 data ")
                                 console.log(track)
@@ -681,22 +684,31 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("accessing artists")
                                 console.log(artistName)
 
+
+                                // Getting accessing artistSongName from Last FM
                                 var artistSongName = track.name
                                 console.log("accessing artistSongName")
                                 console.log(artistSongName)
 
 
-                                // Getting image[4] for highest quality to showcase
+                                // Getting image[3] for highest quality to showcase
                                 var artistNameSongArr = track.image[3]
                                 console.log("accessing artistNameSongImage")
                                 var artistNameSongImage = artistNameSongArr['#text']
                                 console.log(artistNameSongImage)
                                 
+
                                 // Getting nowPlaying from Last FM
-                                
                                 var nowPlayingB = (track['@attr']) ? true : false
                                 console.log("accessing Getting nowPlaying")
                                 console.log(nowPlayingB)
+                                // Now playing logic for element hide
+                                if (nowPlayingB) {
+                                    document.getElementById("lastFMScrobbling").innerHTML = "Scrobbling now";
+                                }
+                                else {
+                                    document.getElementById("lastFMScrobbling").hidden = true;
+                                }
                     
 
 
@@ -704,12 +716,7 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 document.getElementById("artistNameP1").innerHTML = artistName
                                 document.getElementById("artistSongNameP1").innerHTML = artistSongName
                                 document.getElementById("artistNameSongImage").src = artistNameSongImage;
-                                if (nowPlayingB) {
-                                    document.getElementById("lastFMScrobbling").innerHTML = "Scrobbling now";
-                                }
-                                else {
-                                    document.getElementById("lastFMScrobbling").hidden = true;
-                                }
+                                
                                 
 
 
@@ -732,7 +739,7 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                             <h3 id = "artistNameP1" class = "lastFMArtist">  Sensehack</h3>
                             <h3 id = "lastFMScrobbling" class = "lastFMArtist">  Sensehack</h3>
                             <h4 id = "artistSongNameP1" class = "lastFMArtistSong"> Hello Sensehack Last FM</h4>
-                            <img id="artistNameSongImage" width="107" height="98">
+                            <img id="artistNameSongImage" width="150" height="150">
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
