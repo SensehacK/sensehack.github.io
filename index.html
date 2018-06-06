@@ -685,11 +685,18 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("accessing artistSongName")
                                 console.log(artistSongName)
 
+                                var artistNameSongArr = track.image[3]
+                                console.log("accessing artistNameSongImage")
+                                var artistNameSongImage = artistNameSongArr['#text']
+                                console.log(artistNameSongImage)
+
+
                                 // Setting songs meta data on HTML by document by get Element ID
                                 document.getElementById("artistNameP1").innerHTML = artistName
                                 document.getElementById("artistSongNameP1").innerHTML = artistSongName
-                                
-                                
+                                // document.getElementById("artistNameSongImage").attributes.src = artistNameSongImage 
+                                document.getElementById("artistNameSongImage").src = artistNameSongImage;
+                                // document.get
 
                                 
 
@@ -708,7 +715,7 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                         <blockquote>
                             <h3 id = "artistNameP1" class = "lastFMArtist">  Sensehack Last FM</h3>
                             <h4 id = "artistSongNameP1" class = "lastFMArtistSong"> Hello Sensehack Last FM</h4>
-                            <p id = "artistNameP" > Hello Sensehack Last FM</p>
+                            <img id="artistNameSongImage" width="107" height="98">
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
                             <p id = "artistNameP" > Hello Sensehack Last FM</p>
