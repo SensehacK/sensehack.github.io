@@ -671,7 +671,22 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log(jsonResponse.recenttracks.track[0].artist)
                                 // console.log(jsonResponse.key)
 
+                                var track = jsonResponse.recenttracks.track[0]
+                                console.log("printing url 2 data ")
+                                console.log(track)
+                                var artistName = track.artist['#text']
+                                console.log("accessing artists")
+                                console.log(artistName)
+
+                                var artistSongName = track.name
+                                console.log("accessing artistSongName")
+                                console.log(artistSongName)
+
+
+                                document.getElementById("artistNameP").innerHTML = artistName
                                 
+                                console.log("Finally was able to access the json data")
+                                console.log("Thanks to Debashis")
 
                                 
 
