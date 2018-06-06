@@ -288,7 +288,7 @@
 
          <div class="twelve columns collapsed">
 
-            <h1>Check Out Some of My Works.</h1>
+            <h1>Check out my Listening History.</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -314,7 +314,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-02" title="">
-                        <img alt="" src="images/portfolio/console.jpg">
+                        <img id="albumSongImage2" alt="" src="images/portfolio/console.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Console</h5>
@@ -331,7 +331,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-03" title="">
-                        <img alt="" src="images/portfolio/judah.jpg">
+                        <img id="albumSongImage3" alt="" src="images/portfolio/judah.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Judah</h5>
@@ -348,7 +348,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-04" title="">
-                        <img alt="" src="images/portfolio/into-the-light.jpg">
+                        <img id="albumSongImage4" alt="" src="images/portfolio/into-the-light.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Into The Light</h5>
@@ -365,7 +365,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-05" title="">
-                        <img alt="" src="images/portfolio/farmerboy.jpg">
+                        <img id="albumSongImage5" alt="" src="images/portfolio/farmerboy.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Farmer Boy</h5>
@@ -382,7 +382,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-06" title="">
-                        <img alt="" src="images/portfolio/girl.jpg">
+                        <img id="albumSongImage6" alt="" src="images/portfolio/girl.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Girl</h5>
@@ -399,7 +399,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-07" title="">
-                        <img alt="" src="images/portfolio/origami.jpg">
+                        <img id="albumSongImage7" alt="" src="images/portfolio/origami.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Origami</h5>
@@ -416,7 +416,7 @@
                   <div class="item-wrap">
 
                      <a href="#modal-08" title="">
-                        <img alt="" src="images/portfolio/retrocam.jpg">
+                        <img id="albumSongImage8" alt="" src="images/portfolio/retrocam.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
           					      <h5>Retrocam</h5>
@@ -653,7 +653,7 @@
 var urlLastFm = `https://ws.audioscrobbler.com/2.0/
 ?method=user.getrecenttracks
 &user=sensehack
-&limit=5
+&limit=8
 &api_key=4ba03f783090e2ff9ec08e2a63be196b
 &format=json`;
                         
@@ -675,14 +675,18 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("Thanks to Debashis")
 
 
+                    //Accessing 8 json elements overall
+                    for (var i = 0; i < 7; i++) {
 
-                                // Getting accessing artists from Last FM
-                                var track = jsonResponse.recenttracks.track[0]
-                                console.log("printing url 2 data ")
-                                console.log(track)
-                                var artistName = track.artist['#text']
-                                console.log("accessing artists")
-                                console.log(artistName)
+                                    // Getting accessing artists from Last FM
+                                    var track = jsonResponse.recenttracks.track[i]
+                                    console.log("printing url 2 data ")
+                                    console.log(track)
+                                    var artistName = track.artist['#text']
+                                    console.log("accessing artists")
+                                    console.log(artistName)
+
+
 
 
                                 // Getting accessing artistSongName from Last FM
@@ -696,7 +700,11 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("accessing artistNameSongImage")
                                 var artistNameSongImage = artistNameSongArr['#text']
                                 console.log(artistNameSongImage)
-                                
+                                console.log(i + 1)
+                                var i2 = i + 1
+                                var artistSongNameImageArr = "albumSongImage" + i2 
+                                console.log("var artistSongNameImageArr = artistNameSongImage + i ")
+                                console.log(artistSongNameImageArr)
 
                                 // Getting nowPlaying from Last FM
                                 var nowPlayingB = (track['@attr']) ? true : false
@@ -717,14 +725,24 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 document.getElementById("artistSongNameP1").innerHTML = artistSongName
                                 document.getElementById("artistNameSongImage").src = artistNameSongImage;
                                 
-                                
+                                // Setting the 8 Image boxes with Last Fm  Music Scrobble Images
+                                document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
+                                /*
+                                document.getElementById("albumSongImage2").src = artistNameSongImage;
+                                document.getElementById("albumSongImage3").src = artistNameSongImage;
+                                document.getElementById("albumSongImage4").src = artistNameSongImage;
+                                document.getElementById("albumSongImage5").src = artistNameSongImage;
+                                document.getElementById("albumSongImage6").src = artistNameSongImage;
+                                document.getElementById("albumSongImage7").src = artistNameSongImage;
+                                document.getElementById("albumSongImage8").src = artistNameSongImage;
+                                */
 
 
 
                                 
 
-
-                            });
+                    }
+            });
                     
                     
                     
