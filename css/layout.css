@@ -784,6 +784,25 @@ call-to-action .button {
 }
 
 /* ------------------------------------------------------------------ */
+/* h. Last FM Section
+/* ------------------------------------------------------------------ */
+
+.lastFMArtist {
+    color: #fff;
+    font-family: 'librebaskerville-italic', serif;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.lastFMArtistSong {
+  color: rgb(235, 230, 228);
+  font-family: 'librebaskerville-italic', serif;
+  font-size: 26px;
+  line-height: 48px;
+}
+
+
+/* ------------------------------------------------------------------ */
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
 
