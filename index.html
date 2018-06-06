@@ -701,8 +701,8 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 var artistNameSongImage = artistNameSongArr['#text']
                                 console.log(artistNameSongImage)
                                 console.log(i + 1)
-                                var i2 = i + 1
-                                var artistSongNameImageArr = "albumSongImage" + i2 
+                                // Setting the ID with albumSongImage + (i + 1) Because I named them wrong at starting
+                                var artistSongNameImageArr = "albumSongImage" + (i + 1) 
                                 console.log("var artistSongNameImageArr = artistNameSongImage + i ")
                                 console.log(artistSongNameImageArr)
 
