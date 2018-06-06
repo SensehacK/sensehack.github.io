@@ -685,8 +685,8 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
 
 
                     //Accessing 8 json elements overall
-                    for (var i = 0; i < 7; i++) {
-
+                    for (var i = 0; i < 8; i++) {
+                                
                                 // Getting accessing artists from Last FM
                                 var track = jsonResponse.recenttracks.track[i]
                                 console.log("printing url 2 data ")
@@ -734,7 +734,10 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 var artistNameArr = "albumArtist" + (i + 1)
                                 // Setting the ID with albumSongImage + (i + 1) Because I named them wrong at starting
                                 var artistSongNameImageArr = "albumSongImage" + (i + 1) 
-
+                                //Debug prints regarding numbering system. Turns out my 8 elements logic < 7 for i = 0 was missing out for element 8th in JSON response.
+                                console.log(artistSongNameArr)
+                                console.log(artistNameArr)
+                                console.log(artistSongNameImageArr)
 
                                 //Debug Prints Logs
                                 console.log("var artistSongNameImageArr = artistNameSongImage + i ")
