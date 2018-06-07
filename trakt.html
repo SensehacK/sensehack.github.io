@@ -24,10 +24,10 @@ function UserAction() {
           var mockurl2 = 'https://private-anon-de06b59bab-trakt.apiary-mock.com/users/sensehack/stats'
           var mockurl = 'https://private-anon-de06b59bab-trakt.apiary-proxy.com/users/sensehack/stats'
           var corsUrl = "https://cors.io/?http://api.trakt.tv/users/sean/stats"
-
+          var corsUrl2 = "https://cors.io/?http://api.trakt.tv/users/sensehack/stats"
           
   
-          request.open('GET', url4);
+          request.open('GET', corsUrl2);
 
           request.setRequestHeader('Content-Type', 'application/json');
           // request.setRequestHeader('Access-Control-Request-Headers','')
