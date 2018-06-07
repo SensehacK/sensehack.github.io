@@ -22,7 +22,7 @@ function UserAction() {
           request.setRequestHeader('Content-Type', 'application/json');
           request.setRequestHeader('trakt-api-version', '2');
           request.setRequestHeader('trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f');
-
+      
           request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log('Status:', this.status);

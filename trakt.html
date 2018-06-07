@@ -32,10 +32,20 @@ function UserAction() {
           request.setRequestHeader('Content-Type', 'application/json');
           // request.setRequestHeader('Access-Control-Request-Headers','')
           request.setRequestHeader('trakt-api-version', '2');
+
+          // Client ID of Trial 1 sensehack.github.io
           // request.setRequestHeader('trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f');
-          // request.setRequestHeader('trakt-api-key', 'de642baa61a382542ab1e01881f35b4f2da090547b1afcc6d645ffeda6f69db1');
-          request.setRequestHeader('trakt-api-key', 'eb27816fb34b0c545291d1a415deae5dae0002fbfedabf840e81a22c3731c3f0');
           
+          // Client ID of Trial 2 sensehack.github.io
+          // request.setRequestHeader('trakt-api-key', 'de642baa61a382542ab1e01881f35b4f2da090547b1afcc6d645ffeda6f69db1');
+
+          // Client ID of Trial 2 Github.com
+          // request.setRequestHeader('trakt-api-key', 'eb27816fb34b0c545291d1a415deae5dae0002fbfedabf840e81a22c3731c3f0');
+
+          // Client ID of Trial 2 cors.io
+          request.setRequestHeader('trakt-api-key', 'b1a801678459461740064c8c89532bf8f6cbf0036e1c28eba8bf40328160d543');
+          
+
           request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log('Status:', this.status);
