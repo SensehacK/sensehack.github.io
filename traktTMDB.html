@@ -38,8 +38,7 @@
 <button type="submit" onclick="movieTrakt()">Search</button>
 <button type="submit" onclick="imageDisplay()">Images</button>  
 <button type="submit" onclick="displayMovieDetails()">Movies</button>  
-
-
+<button type="submit" onclick="timeout()">TimeOut</button> 
 
 <script>
 
@@ -182,9 +181,21 @@ fetch(concatTmdbMovieURL)
             //Calling individual function image paths urls from TMDB
             singleImageDisplay(fullImageTMDB)
             
+            
 
 
     })
+
+}
+
+function myFunction2() {
+    console.log("SET TIMEOUT")
+    console.log("Delay by 3 secs")
+}
+function timeout() {
+    setTimeout(function()
+            { myFunction2(); }, 3000);
+
 
 }
 
