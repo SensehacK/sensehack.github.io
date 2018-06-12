@@ -957,19 +957,6 @@
                         Integrating Last FM api for scrobbles & history by Sensehack.
                     -->
                     <script>
-                                    /* 
-                                    Example JSON
-                                    {
-                                    "recenttracks": {
-                                        "track": [
-                                            {
-                                                "artist": {
-                                                    "#text": "Kanye West",
-                                                    "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051"
-                                                },
-                                                "name": "I Thought About Killing You",
-                                                "streamable": "0",
-                                    */
 
 
 var urlLastFm = `https://ws.audioscrobbler.com/2.0/
@@ -996,15 +983,6 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("Finally was able to access the json data")
                                 console.log("Thanks to Debashis")
 
-                                /*
-                                Data accessing for ID tags
-                                id="albumSong1"
-                                id="albumArtist1"
-                                id="albumSongImage"
-
-                                */
-
-
 
                     //Accessing 8 json elements overall
                     for (var i = 0; i < 8; i++) {
@@ -1019,13 +997,10 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log("accessing artists")
                                 console.log(artistName)
 
-
-
                                 // Getting accessing artistSongName from Last FM
                                 var artistSongName = track.name
                                 console.log("accessing artistSongName")
                                 console.log(artistSongName)
-                                
 
 
                                 // Getting image[3] for highest quality to showcase
@@ -1081,20 +1056,6 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 else {
                                     console.log("No artistArtworkSongB artwork found")
                                 }
-
-                                // Setting the 8 Image boxes with Last Fm  Music Scrobble Images
-                                // document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
-
-                                
-                                /*
-                                document.getElementById("albumSongImage2").src = artistNameSongImage;
-                                document.getElementById("albumSongImage3").src = artistNameSongImage;
-                                document.getElementById("albumSongImage4").src = artistNameSongImage;
-                                document.getElementById("albumSongImage5").src = artistNameSongImage;
-                                document.getElementById("albumSongImage6").src = artistNameSongImage;
-                                document.getElementById("albumSongImage7").src = artistNameSongImage;
-                                document.getElementById("albumSongImage8").src = artistNameSongImage;
-                                */
 
                     }
 
