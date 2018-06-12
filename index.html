@@ -1035,7 +1035,6 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 console.log(artistNameSongImage)
                                 console.log(i + 1)
                                 
-                                
 
                                 // Getting nowPlaying from Last FM
                                 var nowPlayingB = (track['@attr']) ? true : false
@@ -1074,8 +1073,34 @@ var urlLastFm = `https://ws.audioscrobbler.com/2.0/
                                 document.getElementById(artistSongNameArr).innerHTML = artistSongName
                                 
                                 
+
+                                // Getting nowPlaying from Last FM
+                                var artistArtworkB = (track.image[3]) ? true : false
+                                var artistArtworkSongB = (artistNameSongImage) ? true : false
+                                
+                                // Now playing logic for element hide
+                                if (artistArtworkB) {
+                                    console.log("artist artwork found")
+                                    console.log(artistArtworkB)
+                                    document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
+                                }
+                                else {
+                                    console.log("No artist artwork found")
+                                }
+                                
+                                // Now playing logic for element hide
+                                if (artistArtworkSongB) {
+                                    console.log("artistArtworkSongB artwork found")
+                                    console.log(artistArtworkSongB)
+                                    document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
+                                }
+                                else {
+                                    console.log("No artistArtworkSongB artwork found")
+                                }
                                 // Setting the 8 Image boxes with Last Fm  Music Scrobble Images
-                                document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
+                                // document.getElementById(artistSongNameImageArr).src = artistNameSongImage;
+
+                                
                                 /*
                                 document.getElementById("albumSongImage2").src = artistNameSongImage;
                                 document.getElementById("albumSongImage3").src = artistNameSongImage;
