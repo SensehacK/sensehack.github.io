@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+<body>
+
+<div id="beta"></div>
+
+<script>
+
+// makeCorsRequest();
+function UserAction() {
+          var request = new XMLHttpRequest();
+          // https://api.trakt.tv/users/id/history/type/item_id?start_at=2016-06-01T00%3A00%3A00.000Z&end_at=2016-07-01T23%3A59%3A59.000Z
+
+          var url2 = "https://api.trakt.tv/users/sean/history/movies/123"
+          var url3 = "https://api.trakt.tv/users/sensehack/history/type/item_id?start_at=start_at&end_at=end_at"
+          var url = "https://api.trakt.tv/users/sensehack/stats"
+          
+          var url4 = "https://api.trakt.tv/users/sensehack/stats"
+          // var url = "https://api-staging.trakt.tv/users/sensehack/stats"
+          var mockurl2 = 'https://private-anon-de06b59bab-trakt.apiary-mock.com/users/sensehack/stats'
+          var mockurl = 'https://private-anon-de06b59bab-trakt.apiary-proxy.com/users/sensehack/stats'
+          var corsUrl = "https://cors.io/?http://api.trakt.tv/users/sean/stats"
+          var corsUrl2 = "https://cors.io/?http://api.trakt.tv/users/sensehack/stats"
+          
+  
+          request.open('GET', url4);
+
+          request.setRequestHeader('Content-Type', 'application/json');
+          // request.setRequestHeader('Access-Control-Request-Headers','')
+          // request.setRequestHeader('Access-Control-Allow-Origin', '*');
+          request.setRequestHeader('trakt-api-version', '2');
+
+          // Client ID of Trial 1 sensehack.github.io
+          // request.setRequestHeader('trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f');
+          
+          // Client ID of Trial 2 sensehack.github.io
+          // request.setRequestHeader('trakt-api-key', 'de642baa61a382542ab1e01881f35b4f2da090547b1afcc6d645ffeda6f69db1');
+
+          // Client ID of Trial 2 Github.com
+          // request.setRequestHeader('trakt-api-key', 'eb27816fb34b0c545291d1a415deae5dae0002fbfedabf840e81a22c3731c3f0');
+
+          // Client ID of Trial Cors github io
+          // request.setRequestHeader('trakt-api-key', 'b1a801678459461740064c8c89532bf8f6cbf0036e1c28eba8bf40328160d543');
+          
+          // Client ID of Trial 2 cors.io
+          request.setRequestHeader('trakt-api-key', 'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
+
+          
+          request.onreadystatechange = function () {
+            if (this.readyState === 4) {
+              console.log('Status:', this.status);
+              console.log('Headers:', this.getAllResponseHeaders());
+              console.log('Body:', this.responseText);
+            }
+          };
+
+          request.send();
+          
+
+}
+
+/*
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari
+    xhr.open(method, url, true);
+  } 
+  else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } 
+  else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+  // This is a sample server that supports CORS.
+  // var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+  var url = "https://api.trakt.tv/users/sean/stats"
+  var xhr = createCORSRequest('GET', url);
+
+  // request.setRequestHeader('Content-Type', 'application/json');
+          // request.setRequestHeader('Access-Control-Request-Headers','')
+          // request.setRequestHeader('trakt-api-version', '2');
+          // request.setRequestHeader('trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f');
+
+
+  
+
+xhr.setRequestHeader(
+    'Content-Type', 'application/json');
+    xhr.setRequestHeader(
+      'trakt-api-version', '2'
+    );
+    xhr.setRequestHeader(
+      'trakt-api-key', '6db6aac6199c866739eea166235dc363cebeda354edf67f0c539590899120a8f'
+    );
+    xhr.setRequestHeader
+    (
+      'Access-Control-Request-Method', 'GET'
+    )
+
+
+
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    console.log(text)
+    // var title = getTitle(text);
+    // alert('Response from CORS request to ' + url + ': ' + title);
+  };
+
+  // xhr.onerror = function() {
+  //   alert('Woops, there was an error making the request.');
+  // };
+
+  xhr.send();
+}
+
+*/
+
+</script>
+
+<button type="submit" onclick="UserAction()">Search</button>
+
+</body>
+</html>
