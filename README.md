@@ -10,7 +10,7 @@ Feel free to fork this project & raise a pull request to add more relevant infor
 
 
 
-## Authored by : [Kautilya Save] (http://kautilya.design) 
+## Authored by : [Kautilya](http://kautilya.design) 
 #### [GitHub](https://github.com/SensehacK) 
 #### [Github Pages](https://sensehack.github.io/) 
 
