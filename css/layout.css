@@ -229,6 +229,11 @@ ul#nav li.current a { color: #F06000; }
    margin-right: 15px;
    font-size: 20px;
 }
+#about strong  {
+   font: 14px/20px 'opensans-bold', sans-serif;
+   color: #ddd;
+   margin-bottom: 12px;
+}
 
 
 /* ------------------------------------------------------------------ */
