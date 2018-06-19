@@ -1875,7 +1875,7 @@
     <!-- Contact Section End-->
 
     <!-- 
-    Integrating Trakt TV & TMDB  api for history by Sensehack.
+    Integrating Trakt Movies & TMDB  api for history by Sensehack.
 -->
     <script>
         var movieImgsPath = []
@@ -2117,7 +2117,7 @@
         var showTitleArr = []
         var showEpTitleArr = []
 
-        var outputStrNo = 1;
+        var outputTVStrNo = 1;
         var showTitleStrNo = 1;
         var showEpTitleStrNo = 1;
 
@@ -2271,15 +2271,15 @@
             console.log(imgPath)
 
             console.log(outputStr)
-            outputStr = outputStr + outputStrNo;
+            outputStr = outputStr + outputTVStrNo;
 
             console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
             console.log(outputStr)
 
             // Incrementing the html tag ID string value
-            outputStrNo = (outputStrNo + 1)
+            outputTVStrNo = (outputTVStrNo + 1)
             console.log("tvShowPoster = (tvShowPoster + 1)")
-            console.log(outputStrNo)
+            console.log(outputTVStrNo)
 
             document.getElementById(outputStr).src = imgPath;
 
