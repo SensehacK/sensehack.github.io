@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <p>Hello SensehacK</p>
+
+    <img id="output1">
+    <p id="showTitle1"> </p>
+    <p id="showEpTitle1"> </p>
+    <img id="output2">
+    <p id="showTitle2"> </p>
+    <p id="showEpTitle2"> </p>
+    <img id="output3">
+    <p id="showTitle3"> </p>
+    <p id="showEpTitle3"> </p>
+    <img id="output4">
+    <p id="showTitle4"> </p>
+    <p id="showEpTitle4"> </p>
+    <img id="output5">
+    <p id="showTitle5"> </p>
+    <p id="showEpTitle5"> </p>
+    <img id="output6">
+    <p id="showTitle6"> </p>
+    <p id="showEpTitle6"> </p>
+    <img id="output7">
+    <p id="showTitle7"> </p>
+    <p id="showEpTitle7"> </p>
+    <img id="output8">
+    <p id="showTitle8"> </p>
+    <p id="showEpTitle8"> </p>
+    <!-- output will go here -->
+
+
+    <p id="kautilya"> Get my recent shows History</p>
+
+
+    <button type="submit" onclick="showTrakt()">Search</button>
+    <button type="submit" onclick="imageDisplay()">Images</button>
+    <button type="submit" onclick="displayshowDetails()">shows</button>
+
+
+
+    <script>
+        var showImgsPath = []
+        var showIDsPath = []
+        var showTitleArr = []
+        var showEpTitleArr = []
+
+        var outputStrNo = 1;
+        var showTitleStrNo = 1;
+        var showEpTitleStrNo = 1;
+
+        function showTrakt() {
+            var request = new XMLHttpRequest();
+
+            var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
+
+            var getRecentshowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
+
+            // call url
+            request.open('GET', getRecentShowsHistory);
+
+
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.setRequestHeader('trakt-api-version', '2');
+
+            // Client ID of Trial 2 cors.io
+            request.setRequestHeader('trakt-api-key',
+                'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
+
+
+            request.onreadystatechange = function () {
+
+                if (this.readyState === 4) {
+                    console.log('Status:', this.status);
+                    console.log('Headers:', this.getAllResponseHeaders());
+                    console.log('Body:', this.responseText);
+
+
+                    //Converting responseText String JSON to Javascript Object JSON.
+                    var traktJSON = this.responseText;
+                    var showIDTr = ""
+                    var traktObj = JSON.parse(traktJSON)
+
+
+                    //Accessing 8 json elements overall
+                    for (var i = 0; i < 8; i++) {
+                        console.log("Printing iteration number", i)
+
+                        // Trying to access show titles & EpTitle details  
+                        console.log("traktObj[i].id")
+                        console.log(traktObj[i].id)
+
+                        // Accessing show title
+                        var showTitle = traktObj[i].show.title
+                        console.log("accessing show title")
+                        console.log(showTitle)
+
+                        // Accessing show episode title
+                        var showEpTitle = traktObj[i].episode.title
+                        console.log("accessing show EpTitle")
+                        console.log(showEpTitle)
+
+                        // Accessing show title
+                        console.log("accessing .traktObj[i].show.id.tmdb")
+                        var showTmdbId = traktObj[i].show.ids.tmdb
+                        console.log(showTmdbId)
+                        showIDTr = showTmdbId
+
+                        // Storing show ID's in array
+                        showIDsPath.push(showIDTr)
+                        showTitleArr.push(showTitle)
+                        showEpTitleArr.push(showEpTitle)
+
+
+                        // Calling the function with user show ID
+                        UserAction(showIDTr, showTitle, showEpTitle)
+                    }
+
+                    console.log("showIDsPathMediaStreamTrackEvent")
+                    console.log(showIDsPath)
+
+                    //You can call whatever you want after the function of API show Details & show Images are retrieved. 
+                    // After this stage the synchronous dependency of show images & text is already done.
+                    // Display show Text
+                    displayshowDetails()
+
+                }
+
+            };
+
+            request.send();
+
+        }
+
+        function UserAction(showIDT, mTitle, mEpTitle) {
+
+            // Variables 
+            var urlTMDB = "https://api.themoviedb.org/3/tv/"
+            var showID = showIDT;
+            var apiKeyTMDB = "?api_key=eab66c078f08232f3a3dec068c6a14d3";
+            var langTMDB = "&language=en-US";
+            var fullUrlTMDB =
+                "https://api.themoviedb.org/3/tv/60573?api_key=eab66c078f08232f3a3dec068c6a14d3&language=en-US";
+            var showTitle = mTitle;
+            var showEpTitle = mEpTitle;
+
+            console.log(showTitle)
+            console.log(showEpTitle)
+
+            var concatTmdbshowURL = urlTMDB + showID + apiKeyTMDB + langTMDB
+            console.log("concatTmdbshowURL urlTMDB + showID + apiKeyTMDB + langTMDB")
+            console.log(concatTmdbshowURL)
+            console.log("showIDT")
+            console.log(showIDT)
+
+            // Last FM API Integration Testing
+            fetch(concatTmdbshowURL)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (jsonResponse) {
+
+                    console.log(jsonResponse)
+                    console.log("type of jsonresponse")
+                    console.log(typeof (jsonResponse))
+
+
+                    var poster = jsonResponse.poster_path
+                    console.log("printing jsonResponse.poster_path")
+                    console.log(jsonResponse.poster_path)
+                    var imageTMDB = "http://image.tmdb.org/t/p/w342/"
+                    var fullImageTMDB = imageTMDB + poster
+                    console.log("fullImageTMDB imageTMDB + poster")
+                    console.log(fullImageTMDB)
+
+                    //Adding image paths to the array
+                    showImgsPath.push(fullImageTMDB)
+                    console.log("printing in fetch method")
+                    console.log(showTitle)
+                    console.log(showEpTitle)
+                    //Calling individual function image paths urls from TMDB
+                    singleImageDisplay(fullImageTMDB)
+
+
+
+                })
+
+        }
+
+
+        function singleImageDisplay(imgPath) {
+            var outputStr = "output"
+
+            // Displaying 8 last watch shows images
+            console.log("imageDisplay2(imgPath")
+            console.log(imgPath)
+
+            console.log(outputStr)
+            outputStr = outputStr + outputStrNo;
+
+            console.log("outputStr = outputStr + outputStrNo;")
+            console.log(outputStr)
+
+            // Incrementing the html tag ID string value
+            outputStrNo = (outputStrNo + 1)
+            console.log("outputStrNo = (outputStrNo + 1)")
+            console.log(outputStrNo)
+
+            document.getElementById(outputStr).src = imgPath;
+
+        }
+
+
+
+
+        function displayshowDetails() {
+            for (i = 0; i < 8; i++) {
+
+                var showTitleStr = "showTitle"
+                var showEpTitleStr = "showEpTitle"
+
+                showTitleStr = showTitleStr + showTitleStrNo
+                showEpTitleStr = showEpTitleStr + showEpTitleStrNo
+
+                console.log("showTitleStr")
+                console.log(showTitleStr)
+                console.log("showEpTitleStr")
+                console.log(showEpTitleStr)
+
+                console.log("showTitleArr[i]")
+                console.log(showTitleArr[i])
+                console.log("showEpTitleArr[i]")
+                console.log(showEpTitleArr[i])
+
+                console.log(typeof (showTitleArr[i]))
+                console.log(typeof (showEpTitleArr[i]))
+                console.log(typeof (String(showEpTitleArr[i])))
+
+                console.log(typeof (showTitleStr))
+                console.log(typeof (showEpTitleStr))
+
+                //Actual show Details
+                document.getElementById(showEpTitleStr).innerHTML = showEpTitleArr[i];
+                document.getElementById(showTitleStr).innerHTML = showTitleArr[i];
+
+                // Incrementing the html tag ID string value
+                console.log("// Incrementing the html tag ID string value")
+                showTitleStrNo = (showTitleStrNo + 1)
+                showEpTitleStrNo = (showEpTitleStrNo + 1)
+
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
