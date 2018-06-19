@@ -366,12 +366,12 @@ ul#nav li.current a { color: #F06000; }
   -webkit-animation: css 2s ease;
 }
 .xcode {
-  width: 50%;
+  width: 70%;
   -moz-animation: jquery 2s ease;
   -webkit-animation: jquery 2s ease;
 }
 .ui {
-  width: 50%;
+  width: 60%;
   -moz-animation: jquery 2s ease;
   -webkit-animation: jquery 2s ease;
 }
@@ -386,11 +386,20 @@ ul#nav li.current a { color: #F06000; }
   -webkit-animation: jquery 2s ease;
 }
 .objective {
-  width: 80%;
+  width: 60%;
   -moz-animation: html5 2s ease;
   -webkit-animation: html5 2s ease;
 }
-
+.photography {
+  width: 75%;
+  -moz-animation: jquery 2s ease;
+  -webkit-animation: jquery 2s ease;
+}
+.tWriter {
+  width: 70%;
+  -moz-animation: html5 2s ease;
+  -webkit-animation: html5 2s ease;
+}
 @-moz-keyframes photoshop {
   0%   { width: 0px;  }
   100% { width: 60%;  }
