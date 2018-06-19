@@ -2121,6 +2121,8 @@
         var showTitleStrNo = 1;
         var showEpTitleStrNo = 1;
 
+        showTrakt()
+
         function showTrakt() {
             var request = new XMLHttpRequest();
 
@@ -2185,7 +2187,7 @@
 
 
                         // Calling the function with user show ID
-                        UserAction(showIDTr, showTitle, showEpTitle)
+                        UserActionTV(showIDTr, showTitle, showEpTitle)
                     }
 
                     console.log("showIDsPathMediaStreamTrackEvent")
@@ -2194,7 +2196,7 @@
                     //You can call whatever you want after the function of API show Details & show Images are retrieved. 
                     // After this stage the synchronous dependency of show images & text is already done.
                     // Display show Text
-                    displayshowDetails()
+                    displayshowDetailsTV()
 
                 }
 
@@ -2204,7 +2206,7 @@
 
         }
 
-        function UserAction(showIDT, mTitle, mEpTitle) {
+        function UserActionTV(showIDT, mTitle, mEpTitle) {
 
             // Variables 
             var urlTMDB = "https://api.themoviedb.org/3/tv/"
@@ -2251,7 +2253,7 @@
                     console.log(showTitle)
                     console.log(showEpTitle)
                     //Calling individual function image paths urls from TMDB
-                    singleImageDisplay(fullImageTMDB)
+                    singleImageDisplayTV(fullImageTMDB)
 
 
 
@@ -2260,7 +2262,7 @@
         }
 
 
-        function singleImageDisplay(imgPath) {
+        function singleImageDisplayTV(imgPath) {
             var outputStr = "output"
 
             // Displaying 8 last watch shows images
@@ -2285,7 +2287,7 @@
 
 
 
-        function displayshowDetails() {
+        function displayshowDetailsTV() {
             for (i = 0; i < 8; i++) {
 
                 var showTitleStr = "showTitle"
