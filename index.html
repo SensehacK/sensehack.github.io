@@ -2239,21 +2239,22 @@
                     console.log(typeof (jsonResponse))
 
 
-                    var poster = jsonResponse.poster_path
+                    var posterTV = jsonResponse.poster_path
                     console.log("printing jsonResponse.poster_path")
+                    console.log("printing json$##$#%@%$@%@%@%%@%@%@%@%se.poster_path")
                     console.log(jsonResponse.poster_path)
-                    var imageTMDB = "http://image.tmdb.org/t/p/w342/"
-                    var fullImageTMDB = imageTMDB + poster
+                    var imageTMDBTV = "http://image.tmdb.org/t/p/w342/"
+                    var fullImageTMDBTV = imageTMDBTV + posterTV
                     console.log("fullImageTMDB imageTMDB + poster")
-                    console.log(fullImageTMDB)
+                    console.log(fullImageTMDBTV)
 
                     //Adding image paths to the array
-                    showImgsPath.push(fullImageTMDB)
+                    showImgsPath.push(fullImageTMDBTV)
                     console.log("printing in fetch method")
                     console.log(showTitle)
                     console.log(showEpTitle)
                     //Calling individual function image paths urls from TMDB
-                    singleImageDisplayTV(fullImageTMDB)
+                    singleImageDisplayTV(fullImageTMDBTV)
 
 
 
@@ -2263,7 +2264,7 @@
 
 
         function singleImageDisplayTV(imgPath) {
-            var outputStr = "output"
+            var outputStr = "tvShowPoster"
 
             // Displaying 8 last watch shows images
             console.log("imageDisplay2(imgPath")
@@ -2272,12 +2273,12 @@
             console.log(outputStr)
             outputStr = outputStr + outputStrNo;
 
-            console.log("outputStr = outputStr + outputStrNo;")
+            console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
             console.log(outputStr)
 
             // Incrementing the html tag ID string value
             outputStrNo = (outputStrNo + 1)
-            console.log("outputStrNo = (outputStrNo + 1)")
+            console.log("tvShowPoster = (tvShowPoster + 1)")
             console.log(outputStrNo)
 
             document.getElementById(outputStr).src = imgPath;
