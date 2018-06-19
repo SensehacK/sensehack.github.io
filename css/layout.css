@@ -446,49 +446,52 @@ ul#nav li.current a {
 
 .swift {
   width: 90%;
-  -moz-animation: css 2s ease;
-  -webkit-animation: css 2s ease;
+  -moz-animation: swift 2s ease;
+  -webkit-animation: swift 2s ease;
 }
 
 .xcode {
   width: 70%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: xcode 2s ease;
+  -webkit-animation: xcode 2s ease;
 }
 
 .ui {
   width: 60%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: ui 2s ease;
+  -webkit-animation: ui 2s ease;
 }
 
 .python {
   width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: python 2s ease;
+  -webkit-animation: python 2s ease;
 }
 
 .java {
   width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: java 2s ease;
+  -webkit-animation: java 2s ease;
 }
 
 .objective {
   width: 60%;
-  -moz-animation: html5 2s ease;
-  -webkit-animation: html5 2s ease;
+  -moz-animation: objective 2s ease;
+  -webkit-animation: objective 2s ease;
 }
+
 .photography {
   width: 75%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: photography 2s ease;
+  -webkit-animation: photography 2s ease;
 }
+
 .tWriter {
   width: 70%;
-  -moz-animation: html5 2s ease;
-  -webkit-animation: html5 2s ease;
+  -moz-animation: tWriter 2s ease;
+  -webkit-animation: tWriter 2s ease;
 }
+
 @-moz-keyframes photoshop {
   0% {
     width: 0px;
@@ -543,6 +546,78 @@ ul#nav li.current a {
   }
 }
 
+@-moz-keyframes swift {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@-moz-keyframes xcode {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-moz-keyframes ui {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-moz-keyframes objective {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-moz-keyframes photography {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@-moz-keyframes tWriter {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 @-webkit-keyframes photoshop {
   0% {
     width: 0px;
@@ -594,6 +669,78 @@ ul#nav li.current a {
   }
   100% {
     width: 50%;
+  }
+}
+
+@-webkit-keyframes swift {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes xcode {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes ui {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes objective {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes photography {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes tWriter {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
   }
 }
 
