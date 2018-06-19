@@ -23,8 +23,8 @@ function UserAction() {
           // var url = "https://api-staging.trakt.tv/users/sensehack/stats"
           var mockurl2 = 'https://private-anon-de06b59bab-trakt.apiary-mock.com/users/sensehack/stats'
           var mockurl = 'https://private-anon-de06b59bab-trakt.apiary-proxy.com/users/sensehack/stats'
-          var corsUrl = "https://cors.io/?http://api.trakt.tv/users/sean/stats"
-          var corsUrl2 = "https://cors.io/?http://api.trakt.tv/users/sensehack/stats"
+          var corsUrl = "https://cors.io/?https://api.trakt.tv/users/sean/stats"
+          var corsUrl2 = "https://cors.io/?https://api.trakt.tv/users/sensehack/stats"
           
   
           request.open('GET', url4);
@@ -88,7 +88,7 @@ function createCORSRequest(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest() {
   // This is a sample server that supports CORS.
-  // var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+  // var url = 'https://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
   var url = "https://api.trakt.tv/users/sean/stats"
   var xhr = createCORSRequest('GET', url);
 
