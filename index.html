@@ -2095,7 +2095,13 @@
             // You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
             // After this stage the synchronous dependency of Movie images & text is already done.
             // Display TV shows Text
-            showTrakt()
+            setTimeout(function ()
+
+                {
+                    console.log("SET TIMEOUT")
+                    console.log("Delay by 1 secs")
+                    showTrakt()
+                }, 2000);
 
 
 
@@ -2257,7 +2263,7 @@
                             console.log("SET TIMEOUT")
                             console.log("Delay by 1 secs")
                             singleImageDisplayTV(fullImageTMDBTV)
-                        }, 800);
+                        }, 2000);
 
 
                     // Old & working just images not appearing properly in order.
@@ -2293,7 +2299,26 @@
 
         }
 
+        function fullImageDisplayTV(showImgsPathArr) {
+            var outputStrb = "tvShowPoster"
 
+            // Displaying 8 last watch shows images
+            console.log("imageDisplay2(imgPath")
+            console.log(imgPath)
+
+
+
+            for (i = 0; i < showImgsPathArr.count; i++) {
+                var imgPath = showImgsPathArr[i];
+                outputStrb = outputStrb + (i + 1);
+                console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
+                console.log(outputStrb)
+
+                document.getElementById(outputStr).src = imgPath;
+
+            }
+
+        }
 
 
         function displayshowDetailsTV() {
