@@ -2299,17 +2299,15 @@
 
         }
 
-        function fullImageDisplayTV(showImgsPathArr) {
+        function fullImageDisplayTV() {
             var outputStrb = "tvShowPoster"
 
             // Displaying 8 last watch shows images
-            console.log("imageDisplay2(imgPath")
-            console.log(imgPath)
+            console.log("fullImageDisplayTV imageDisplay2(imgPath")
 
 
-
-            for (i = 0; i < showImgsPathArr.count; i++) {
-                var imgPath = showImgsPathArr[i];
+            for (i = 0; i < showImgsPath.count; i++) {
+                var imgPath = showImgsPath[i];
                 outputStrb = outputStrb + (i + 1);
                 console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
                 console.log(outputStrb)
@@ -2358,6 +2356,8 @@
 
             }
 
+            // Display fullImageDisplayTV show images
+            fullImageDisplayTV();
 
 
         }
