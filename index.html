@@ -2092,6 +2092,10 @@
                 movieYearStrNo = (movieYearStrNo + 1)
 
             }
+            // You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
+            // After this stage the synchronous dependency of Movie images & text is already done.
+            // Display TV shows Text
+            showTrakt()
 
 
 
@@ -2113,7 +2117,8 @@
         var showTitleStrNo = 1;
         var showEpTitleStrNo = 1;
 
-        showTrakt()
+        //Default Calling function for Trakt TV shows.
+        // showTrakt()
 
         function showTrakt() {
             var request = new XMLHttpRequest();
@@ -2244,7 +2249,7 @@
                     console.log("printing in fetch method")
                     console.log(showTitle)
                     console.log(showEpTitle)
-                    
+
                     //Testing Timeout parameter for calling image resources
                     setTimeout(function ()
 
