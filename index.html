@@ -54,6 +54,7 @@
 </head>
 
 <body>
+<body onload="myFunction()">
 
     <!-- Header
    ================================================== -->
@@ -2359,9 +2360,11 @@
                 showEpTitleStrNo = (showEpTitleStrNo + 1)
 
             }
+        }
 
-            // Display fullImageDisplayTV show images
-            fullImageDisplayTV();
+        // onload = reloadPage();
+
+        function reloadPage() {
             // Trying the webpage reload again.
             console.log("reloading the page")
             location.reload(false);
