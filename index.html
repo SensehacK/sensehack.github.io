@@ -2368,7 +2368,12 @@
         function reloadPage() {
             // Trying the webpage reload again.
             console.log("reloading the page")
-            location.reload(false);
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload(false);
+            }
+
+            // location.reload(false);
             console.log("reloaded the command page")
 
         }
