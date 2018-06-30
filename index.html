@@ -2098,7 +2098,7 @@
             // You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
             // After this stage the synchronous dependency of Movie images & text is already done.
             // Display TV shows Text
-            
+
             // setTimeout(function ()
 
             //     {
@@ -2128,17 +2128,20 @@
         var showEpTitleStrNo = 1;
 
         //Default Calling function for Trakt TV shows.
-        // showTrakt()
+        showTrakt()
 
-        setTimeout(function ()
+        // Display TV shows Text with timeout.
 
-                {
-                    console.log("SET TIMEOUT")
-                    console.log("Delay by 1 secs")
-                    showTrakt()
-                }, 2000);
+        // setTimeout(function ()
+
+        //         {
+        //             console.log("SET TVShow TIMEOUT")
+        //             console.log("Delay by 2 secs")
+        //             showTrakt()
+        //         }, 2000);
 
         function showTrakt() {
+            console.log("SET function showTrakt() T")
             var request = new XMLHttpRequest();
 
             var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
@@ -2376,7 +2379,7 @@
             // Trying the webpage reload again.
             console.log("reloading the page")
             if (!window.location.hash) {
-                window.location = window.location + '#home';
+                window.location = window.location + '#sensehack';
                 window.location.reload(false);
             }
 
