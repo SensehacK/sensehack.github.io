@@ -2402,6 +2402,10 @@
             console.log("reloading the page")
             if (!window.location.hash) {
                 window.location = window.location + '#sensehack';
+                //Reinitiating the variables to 1.
+                outputTVStrNo = 1;
+                showTitleStrNo = 1;
+                showEpTitleStrNo = 1;
                 showTrakt();
                 // window.location.reload(false);
             }
