@@ -2098,13 +2098,14 @@
             // You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
             // After this stage the synchronous dependency of Movie images & text is already done.
             // Display TV shows Text
-            setTimeout(function ()
+            
+            // setTimeout(function ()
 
-                {
-                    console.log("SET TIMEOUT")
-                    console.log("Delay by 1 secs")
-                    showTrakt()
-                }, 2000);
+            //     {
+            //         console.log("SET TIMEOUT")
+            //         console.log("Delay by 1 secs")
+            //         showTrakt()
+            //     }, 2000);
 
 
 
@@ -2128,6 +2129,14 @@
 
         //Default Calling function for Trakt TV shows.
         // showTrakt()
+
+        setTimeout(function ()
+
+                {
+                    console.log("SET TIMEOUT")
+                    console.log("Delay by 1 secs")
+                    showTrakt()
+                }, 2000);
 
         function showTrakt() {
             var request = new XMLHttpRequest();
