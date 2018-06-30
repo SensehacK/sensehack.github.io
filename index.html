@@ -2406,13 +2406,17 @@
                 outputTVStrNo = 1;
                 showTitleStrNo = 1;
                 showEpTitleStrNo = 1;
+                //Calling function once again to Make sure image cached are also reused overall.
+                //Which leads to using the cache images synchronously in one order & text + images are in sync.
+                // Still as a third backup plan I tried calling fullImageDisplayTV() function but maybe it doesnt work like that.
+
                 showTrakt();
                 
                 // window.location.reload(false);
             }
 
             // location.reload(false);
-            fullImageDisplayTV();
+            // fullImageDisplayTV();
             console.log("reloaded the command page")
 
         }
