@@ -2,7 +2,7 @@
 
 ![alt text][Kautilya Homepage]
 
-[Kautilya Homepage]: https://github.com/SensehacK/SensehacK.github.io/blob/master/images/readMe/homepage.jpg "Kautilya Save - Sensehack"
+[Kautilya Homepage]: https://github.com/SensehacK/SensehacK.github.io/blob/master/images/readMe/homepage.png "Kautilya Save - Sensehack"
 
 Creating Documentation related to Kautilya Save
 
