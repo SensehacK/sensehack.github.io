@@ -12,7 +12,7 @@
    d. Resume Section
    e. Portfolio Section
    f. Call To Action Section
-   g. Testimonials Section
+   g. Social Section
    h. Contact Section
    i. Footer
 
@@ -94,7 +94,7 @@ header .banner-text hr {
   border-color: rgba(150, 150, 150, .1);
 }
 
-/* header social links */
+/* header Social links */
 
 header .social {
   margin: 24px 0;
@@ -1131,11 +1131,11 @@ call-to-action .button {
 }
 
 /* ------------------------------------------------------------------
-/* g. Testimonials
+/* g. social
 /* ------------------------------------------------------------------ */
 
-#testimonials {
-  background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+#social {
+  background: #1F1F1F url(../images/social.jpg) no-repeat center center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
@@ -1145,27 +1145,27 @@ call-to-action .button {
   overflow: hidden;
 }
 
-#testimonials .text-container {
+#social .text-container {
   padding-top: 96px;
   padding-bottom: 66px;
 }
 
-#testimonials h1 {
+#social h1 {
   font: 18px/24px 'opensans-bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #fff;
 }
 
-#testimonials h1 span {
+#social h1 span {
   display: none;
 }
 
-#testimonials .header-col {
+#social .header-col {
   padding-top: 9px;
 }
 
-#testimonials .header-col h1:before {
+#social .header-col h1:before {
   font-family: 'FontAwesome';
   content: "\f10d";
   padding-right: 10px;
@@ -1178,18 +1178,18 @@ call-to-action .button {
 
 /*	Blockquotes */
 
-#testimonials blockquote {
+#social blockquote {
   margin: 0 0px 30px 0px;
   padding-left: 0;
   position: relative;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
 }
 
-#testimonials blockquote:before {
+#social blockquote:before {
   content: none;
 }
 
-#testimonials blockquote p {
+#social blockquote p {
   font-family: 'librebaskerville-italic', serif;
   padding: 0;
   font-size: 24px;
@@ -1197,7 +1197,7 @@ call-to-action .button {
   color: #fff
 }
 
-#testimonials blockquote cite {
+#social blockquote cite {
   display: block;
   font-size: 12px;
   font-style: normal;
@@ -1205,12 +1205,12 @@ call-to-action .button {
   color: #fff;
 }
 
-#testimonials blockquote cite:before {
+#social blockquote cite:before {
   content: "\2014 \0020";
 }
 
-#testimonials blockquote cite a,
-#testimonials blockquote cite a:visited {
+#social blockquote cite a,
+#social blockquote cite a:visited {
   color: #8B9798;
   border: none
 }
