@@ -1,6 +1,6 @@
 # Kautilya Save Landing Page Website
 
-![alt text][image3]
+![alt text][Kautilya Homepage]
 
 [Kautilya Homepage]: https://github.com/SensehacK/SensehacK.github.io/blob/master/images/readMe/homepage.jpg "Kautilya Save - Sensehack"
 
