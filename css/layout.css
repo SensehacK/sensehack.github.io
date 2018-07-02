@@ -873,6 +873,20 @@ ul#nav li.current a {
   margin: 0 auto;
 }
 
+.popup-modal-music {
+  max-width: 300px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+
+.popup-modal-trakt {
+  max-width: 340px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+
 .popup-modal .description-box {
   padding: 12px 36px 18px 36px;
 }
