@@ -543,6 +543,7 @@
 
                 <h1>Check out my Listening History.</h1>
 
+                <h1 id="currentSong1"> Currently listening to</h1>
                 <!-- portfolio-wrapper -->
                 <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
 
@@ -1998,10 +1999,29 @@
                 console.log(typeof (jsonResponse))
                 console.log("printing try artists")
                 console.log(jsonResponse.recenttracks.track[0].artist)
-                // console.log(jsonResponse.key)
 
-                console.log("Finally was able to access the json data")
-                console.log("Thanks to Debashis")
+                // Getting nowPlaying from Last FM for first Artist
+                var firstTrack = jsonResponse.recenttracks.track[0]
+
+                var nowPlayingB = (firstTrack['@attr']) ? true : false
+                console.log("accessing Getting nowPlaying")
+                console.log(nowPlayingB)
+                var currentPlayingArtist = firstTrack.artist['#text'];
+                var currentPlayingSong = firstTrack.name;
+                var currentPlayText = "Currently playing " + currentPlayingArtist + " - " + currentPlayingSong;
+                console.log(currentPlayText);
+                // Now playing logic for element hide
+                if (nowPlayingB) {
+                    console.log("sSensehack")
+                    console.log(currentPlayText);
+                    // document.getElementById("currentSong1").hidden = false;
+                    document.getElementById("currentSong1").innerHTML =
+                        currentPlayText;
+
+                } else {
+                    console.log("else ssensehack");
+                    document.getElementById("currentSong1").hidden = true;
+                }
 
 
                 //Accessing 8 json elements overall
@@ -2009,6 +2029,7 @@
 
                     // Getting accessing artists from Last FM
                     var track = jsonResponse.recenttracks.track[i]
+
                     console.log("printing url 2 data ")
                     console.log(track)
 
@@ -2030,18 +2051,6 @@
                     console.log(artistNameSongImage)
                     console.log(i + 1)
 
-
-                    // Getting nowPlaying from Last FM
-                    var nowPlayingB = (track['@attr']) ? true : false
-                    console.log("accessing Getting nowPlaying")
-                    console.log(nowPlayingB)
-                    // Now playing logic for element hide
-                    // if (nowPlayingB) {
-                    //     document.getElementById("lastFMScrobbling").innerHTML =
-                    //         "Scrobbling now";
-                    // } else {
-                    //     document.getElementById("lastFMScrobbling").hidden = true;
-                    // }
 
                     // Setting variable for dynamic ID generation 
                     // Setting the ID with artistName + (i + 1) Because I named them wrong at starting
