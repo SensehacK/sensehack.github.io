@@ -2059,6 +2059,7 @@
                     var artistNameArr = "albumArtist" + (i + 1)
                     // Setting the ID with albumSongImage + (i + 1) Because I named them wrong at starting
                     var artistSongNameImageArr = "albumSongImage" + (i + 1)
+                    var artistSongNameBImageArr = "albumSongBImage" + (i + 1)
                     //Debug prints regarding numbering system. Turns out my 8 elements logic < 7 for i = 0 was missing out for element 8th in JSON response.
                     console.log(artistSongNameArr)
                     console.log(artistNameArr)
@@ -2080,8 +2081,13 @@
                     if (artistArtworkSongB) {
                         console.log("artistArtworkSongB artwork found")
                         console.log(artistArtworkSongB)
+                        //Setting main 8 blocks image
                         document.getElementById(artistSongNameImageArr).src =
                             artistNameSongImage;
+                        //Setting pop up modal image
+                        document.getElementById(artistSongNameBImageArr).src =
+                            artistNameSongImage;
+
                     } else {
                         console.log("No artistArtworkSongB artwork found")
                     }
@@ -2273,23 +2279,29 @@
 
         function singleImageDisplay(imgPath) {
             var outputStr = "moviePoster"
-
+            //moviePosterBImage
+            var moviePosterBImgStr = "moviePosterBImage"
             // Displaying 8 last watch movies images
             console.log("imageDisplay2(imgPath")
             console.log(imgPath)
-
             console.log(outputStr)
+
+            // Setting movie Poster images Div tag + number.
             outputStr = outputStr + outputMovieStrNo;
+            moviePosterBImgStr = moviePosterBImgStr + outputMovieStrNo;
 
             console.log("outputStr = outputStr + outputMovieStrNo;")
             console.log(outputStr)
+            console.log(moviePosterBImgStr)
 
             // Incrementing the html tag ID string value
             outputMovieStrNo = (outputMovieStrNo + 1)
             console.log("outputMovieStrNo = (outputMovieStrNo + 1)")
             console.log(outputMovieStrNo)
 
+            //Setting the div tag of moviePoster accordingly.
             document.getElementById(outputStr).src = imgPath;
+            document.getElementById(moviePosterBImgStr).src = imgPath;
 
         }
 
@@ -2531,19 +2543,18 @@
 
         function singleImageDisplayTV(imgPath) {
             var outputStr = "tvShowPoster"
-            // tvShowBPoster5
-            var detailStr = "tvShowBPoster"
+            var tvShowBPosterStr = "tvShowBPoster"
             // Displaying 8 last watch shows images
             console.log("imageDisplay2(imgPath")
             console.log(imgPath)
 
             console.log(outputStr)
             outputStr = outputStr + outputTVStrNo;
-            detailStr = detailStr + outputTVStrNo;
+            tvShowBPosterStr = tvShowBPosterStr + outputTVStrNo;
 
             console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
             console.log(outputStr)
-            console.log(detailStr)
+            console.log(tvShowBPosterStr)
 
             // Incrementing the html tag ID string value
             outputTVStrNo = (outputTVStrNo + 1)
@@ -2551,7 +2562,7 @@
             console.log(outputTVStrNo)
 
             document.getElementById(outputStr).src = imgPath;
-            document.getElementById(detailStr).src = imgPath;
+            document.getElementById(tvShowBPosterStr).src = imgPath;
 
         }
 
