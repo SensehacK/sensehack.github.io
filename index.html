@@ -575,32 +575,20 @@
         <div class="row skill" id="developer">
 
             <div class="twelveC columns collapsed">
-                <h1>Check out Time Usage.</h1>
                 <h1>
                     <span>Rescue Time Analysis.</span>
                 </h1>
                 <div class="six columns header-col">
-                    <h1>
-                        <span>Rescue Time Analysis.</span>
-                    </h1>
-                    <h1> Yesterday Analysis</h1>
+                    <h1> Pie Chart</h1>
                     <div id="rescueTimeChartPie_div3"></div>
                     <!-- end skill-bars -->
 
-
-
                 </div>
                 <div class="six columns header-col">
-                    <h1>
-                        <span>Rescue Time Analysis2.</span>
-                    </h1>
-                    <h1> Overall Analysis</h1>
+                    <h1> Bar Chart</h1>
 
                     <div id="rescueTimeChartBar_div3"></div>
                     <!-- end skill-bars -->
-
-
-
                 </div>
 
 
@@ -2841,8 +2829,9 @@
             console.log("In drawChart3 google 23 piechart");
             var rescueTimeOptions = {
                 'title': 'How Much Time I utilize yesterday.',
-                'width': 600,
                 'height': 400
+                // 'width': 600,
+
             };
 
             var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
@@ -2858,7 +2847,7 @@
             console.log("start of rescueTimeChartBar");
             var rescueDataBar2 = new google.visualization.DataTable();
             rescueDataBar2.addColumn('string', 'Topping');
-            rescueDataBar2.addColumn('number', 'Slices');
+            rescueDataBar2.addColumn('number', 'Percent');
             // rescueData2.addColumn('number', 'Percentage');
 
             rescueDataBar2.addRows([
@@ -2871,8 +2860,9 @@
             console.log("In drawChart3 google 23 barchart");
             var rescueTimeBarOptions = {
                 'title': 'How Much Time I utilize yesterday.',
-                'width': 600,
                 'height': 400
+                // 'width': 600,
+
             };
 
             var rescueTimeChartBar2 = new google.visualization.BarChart(document.getElementById(
