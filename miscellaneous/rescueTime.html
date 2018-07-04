@@ -22,12 +22,6 @@
 
             // call url 
             request.open('GET', getRescueTimeX);
-            // request.setRequestHeader('Content-Type', 'application/json');
-            // request.setRequestHeader('rescueTime-api-version', '2');
-
-            //  Client ID of Trial 2 cors.io 
-            // request.setRequestHeader('rescueTime-api-key', 'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
-
             request.onreadystatechange = function () {
                 if (this.readyState === 4) {
                     console.log('Status:', this.status);
@@ -64,54 +58,11 @@
 
                     console.log("end of Rescue Time call");
                     // drawChart3();
-                    drawChart();
-                    drawChart3();
+                    // drawChart();
+                    // drawChart3();
                     rescueTimeChart();
                     rescueTimeChartBar();
-                    // // Load the Visualization API and the corechart package.
-                    // google.charts.load('current', {
-                    //     'packages': ['corechart']
-                    // });
 
-                    // // Set a callback to run when the Google Visualization API is loaded.
-                    // google.charts.setOnLoadCallback(drawChart3);
-
-
-                    // var chart2 = new google.visualization.BarChart(document.getElementById('bar_div'));
-                    // chart2.draw(data2, options2);
-
-                    function drawChart2() {
-                        // Calling Rescue Time + google Pie chart
-                        var rescueData = new google.visualization.DataTable();
-                        rescueData.addColumn('string', 'Category');
-                        rescueData.addColumn('number', 'Percentage');
-
-                        // rescueData.addRows([
-                        //     ['Mushrooms', rTvery_productive_percentage],
-                        //     ['Onions', rTproductive_percentage],
-                        //     ['Olives', rTneutral_percentage],
-                        //     ['Zucchini', rTdistracting_percentage],
-                        //     ['Onions', rTvery_distracting_percentage]
-                        // ]);
-                        rescueData.addRows([
-                            ['Mushrooms', 54],
-                            ['Onions', 32],
-                            ['Olives', 23],
-                            ['Zucchini', 21],
-                            ['Onions', 12]
-                        ]);
-                        var rescueTimeChart = {
-                            'title': 'How Much Time I utilize yesterday.',
-                            'width': 600,
-                            'height': 400
-                        };
-
-                        var rescueTimeChart = new google.visualization.PieChart(document.getElementById(
-                            'rescueTimeChartBar_div'));
-                        rescueTimeChart.draw(rescueData, rescueTimeChart);
-                    } // End function drawChart2
-
-                    // drawChart2();
                 }
 
             };
@@ -171,18 +122,6 @@
                 ['Onions', onions2]
             ]);
 
-
-            /*
-            var rTvery_productive_percentage = rescueTimeObj[0].very_productive_percentage;
-                    var rTproductive_percentage = rescueTimeObj[0].productive_percentage;
-                    var rTneutral_percentage = rescueTimeObj[0].neutral_percentage;
-                    var rTdistracting_percentage = rescueTimeObj[0].distracting_percentage;
-                    var rTvery_distracting_percentage = rescueTimeObj[0].very_distracting_percentage;
-
-                    */
-
-
-
             // Set chart options
             var options = {
                 'title': 'How Much Pizza I Ate Last Night',
@@ -202,77 +141,10 @@
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
             chart.draw(data, options);
+
             // Instantiate and draw our chart, passing in some options.
             var chart2 = new google.visualization.BarChart(document.getElementById('bar_div'));
             chart2.draw(data2, options2);
-
-
-            var rescueData2 = new google.visualization.DataTable();
-            rescueData2.addColumn('string', 'Topping');
-            rescueData2.addColumn('number', 'Slices');
-            // rescueData2.addColumn('number', 'Percentage');
-
-            rescueData2.addRows([
-                ['Very_Productive', rTvery_productive_percentage],
-                ['Productive', rTproductive_percentage],
-                ['Neutral', rTneutral_percentage],
-                ['Distracting', rTdistracting_percentage],
-                ['Very_Distracting', rTvery_distracting_percentage]
-            ]);
-            // rescueData2.addRows([
-            //     ['Mushrooms', 54],
-            //     ['Onions', 32],
-            //     ['Olives', 23],
-            //     ['Zucchini', 21],
-            //     ['Onions', 12]
-            // ]);
-            console.log("In drawChart3 google 23 piechart");
-            var rescueTimeOptions = {
-                'title': 'How Much Time I utilize yesterday.',
-                'width': 600,
-                'height': 400
-            };
-
-            var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
-                'rescueTimeChartBar_div'));
-            rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
-
-        }
-
-
-        function drawChart3() {
-            // Calling Rescue Time + google Pie chart
-            var rescueData3 = new google.visualization.DataTable();
-            rescueData3.addColumn('string', 'Topping');
-            rescueData3.addColumn('number', 'Slices');
-            // rescueData2.addColumn('number', 'Percentage');
-
-            // rescueData.addRows([
-            //     ['Mushrooms', rTvery_productive_percentage],
-            //     ['Onions', rTproductive_percentage],
-            //     ['Olives', rTneutral_percentage],
-            //     ['Zucchini', rTdistracting_percentage],
-            //     ['Onions', rTvery_distracting_percentage]
-            // ]);
-            rescueData3.addRows([
-                ['Mushrooms', 54],
-                ['Onions', 32],
-                ['Olives', 23],
-                ['Zucchini', 21],
-                ['Onions', 12]
-            ]);
-            console.log("In drawChart3 google 23 piechart");
-            var rTOptions = {
-                'title': 'How Much Time I utilize yesterday.',
-                'width': 600,
-                'height': 400
-            };
-
-            var rescueTimeChart4 = new google.visualization.PieChart(document.getElementById(
-                'rescueTimeChartBar_div2'));
-            rescueTimeChart4.draw(rescueData3, rTOptions);
-
-
         }
 
         function rescueTimeChart() {
@@ -289,13 +161,6 @@
                 ['Distracting', rTdistracting_percentage],
                 ['Very_Distracting', rTvery_distracting_percentage]
             ]);
-            // rescueData2.addRows([
-            //     ['Mushrooms', 54],
-            //     ['Onions', 32],
-            //     ['Olives', 23],
-            //     ['Zucchini', 21],
-            //     ['Onions', 12]
-            // ]);
             console.log("In drawChart3 google 23 piechart");
             var rescueTimeOptions = {
                 'title': 'How Much Time I utilize yesterday.',
@@ -322,13 +187,6 @@
                 ['Distracting', rTdistracting_percentage],
                 ['Very_Distracting', rTvery_distracting_percentage]
             ]);
-            // rescueData2.addRows([
-            //     ['Mushrooms', 54],
-            //     ['Onions', 32],
-            //     ['Olives', 23],
-            //     ['Zucchini', 21],
-            //     ['Onions', 12]
-            // ]);
             console.log("In drawChart3 google 23 piechart");
             var rescueTimeOptions = {
                 'title': 'How Much Time I utilize yesterday.',
