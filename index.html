@@ -2848,12 +2848,12 @@
 
         function rescueTimeChartBar() {
 
-            var rescueData2 = new google.visualization.DataTable();
-            rescueData2.addColumn('string', 'Topping');
-            rescueData2.addColumn('number', 'Slices');
+            var rescueDataBar2 = new google.visualization.DataTable();
+            rescueDataBar2.addColumn('string', 'Topping');
+            rescueDataBar2.addColumn('number', 'Slices');
             // rescueData2.addColumn('number', 'Percentage');
 
-            rescueData2.addRows([
+            rescueDataBar2.addRows([
                 ['Very Productive', rTvery_productive_percentage],
                 ['Productive', rTproductive_percentage],
                 ['Neutral', rTneutral_percentage],
@@ -2861,15 +2861,15 @@
                 ['Very Distracting', rTvery_distracting_percentage]
             ]);
             console.log("In drawChart3 google 23 piechart");
-            var rescueTimeOptions = {
+            var rescueTimeBarOptions = {
                 'title': 'How Much Time I utilize yesterday.',
                 'width': 600,
                 'height': 400
             };
 
-            var rescueTimeChart2 = new google.visualization.BarChart(document.getElementById(
+            var rescueTimeChartBar2 = new google.visualization.BarChart(document.getElementById(
                 'rescueTimeChartBar_div3'));
-            rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
+            rescueTimeChartBar2.draw(rescueDataBar2, rescueTimeBarOptions);
         }
     </script>
     <!-- RescueTime + Google Charts end
