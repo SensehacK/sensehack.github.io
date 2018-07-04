@@ -576,7 +576,9 @@
 
             <div class="twelveC columns collapsed">
                 <h1>Check out Time Usage.</h1>
-
+                <h1>
+                    <span>Rescue Time Analysis.</span>
+                </h1>
                 <div class="six columns header-col">
                     <h1>
                         <span>Rescue Time Analysis.</span>
@@ -2795,8 +2797,10 @@
 
                     console.log("end of Rescue Time call");
 
-                    rescueTimeChart();
-                    rescueTimeChartBar();
+                    // rescueTimeChart();
+                    console.log("end of Rescue Time call 1 rescueTimeChart ");
+                    // rescueTimeChartBar();
+                    console.log("end of Rescue Time call 1 rescueTimeChartBar ");
 
                 }
 
@@ -2821,7 +2825,7 @@
 
 
         function rescueTimeChart() {
-
+            console.log("start of rescueTimeChart");
             var rescueData2 = new google.visualization.DataTable();
             rescueData2.addColumn('string', 'Topping');
             rescueData2.addColumn('number', 'Slices');
@@ -2844,10 +2848,14 @@
             var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
                 'rescueTimeChartPie_div3'));
             rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
+            console.log("end of rescueTimeChart");
+
+            //Call the bar Function on load.
+            rescueTimeChartBar()
         }
 
         function rescueTimeChartBar() {
-
+            console.log("start of rescueTimeChartBar");
             var rescueDataBar2 = new google.visualization.DataTable();
             rescueDataBar2.addColumn('string', 'Topping');
             rescueDataBar2.addColumn('number', 'Slices');
@@ -2860,7 +2868,7 @@
                 ['Distracting', rTdistracting_percentage],
                 ['Very Distracting', rTvery_distracting_percentage]
             ]);
-            console.log("In drawChart3 google 23 piechart");
+            console.log("In drawChart3 google 23 barchart");
             var rescueTimeBarOptions = {
                 'title': 'How Much Time I utilize yesterday.',
                 'width': 600,
@@ -2870,6 +2878,7 @@
             var rescueTimeChartBar2 = new google.visualization.BarChart(document.getElementById(
                 'rescueTimeChartBar_div3'));
             rescueTimeChartBar2.draw(rescueDataBar2, rescueTimeBarOptions);
+            console.log("end of rescueTimeChartBar");
         }
     </script>
     <!-- RescueTime + Google Charts end
