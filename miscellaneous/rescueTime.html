@@ -1,10 +1,16 @@
 <html>
 
 <head>
-
-    <script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        // Calling Rescue Time Data
         movierescueTime();
-
+        var rTvery_productive_percentage;
+        var rTproductive_percentage;
+        var rTneutral_percentage;
+        var rTdistracting_percentage;
+        var rTvery_distracting_percentage;
 
         function movierescueTime() {
             var request = new XMLHttpRequest();
@@ -14,25 +20,11 @@
             var getRescueTimeX =
                 "https://cors.io/?https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN"
 
-            var rescueTimeCors =
-                "https://www.rescuetime.com/anapi/daily_summary_feed?key=B638SczooWDFSmDV5HRBQ7CH18KlE3K1tvAuPaoX"
-
-            var rescueTimeCors2 =
-                "https://www.rescuetime.com/anapi/daily_summary_feed?key=B635Rcwq0kDCH985GxxyhFe5KQ_Elq3cy_hIZJTZ"
-
-            var rescueTimeCors3 =
-                "https://www.rescuetime.com/anapi/daily_summary_feed?key=B634clzLzmImiUdgddSYUkkLiFAyKoRZcLfV3Y2j"
-
             // call url 
-            // request.open('GET', getRescueTimeX);
-
-            request.open('GET', rescueTimeCors3);
-            // var xhr = createCORSRequest('GET', getRescueTime);
-            // xhr.send();
-
+            request.open('GET', getRescueTimeX);
             // request.setRequestHeader('Content-Type', 'application/json');
             // request.setRequestHeader('rescueTime-api-version', '2');
-            // request.setRequestHeader('Access-Control-Allow-Origin', '*');
+
             //  Client ID of Trial 2 cors.io 
             // request.setRequestHeader('rescueTime-api-key', 'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
 
@@ -53,53 +45,300 @@
                     console.log("rescueTimeObj[i].id")
                     console.log(rescueTimeObj[0].id)
                     console.log("rescueTimeObj[i].productivity_pulse")
+                    var rescueTimePulse = rescueTimeObj[0].productivity_pulse;
+                    console.log(rescueTimePulse);
                     console.log(rescueTimeObj[0].productivity_pulse)
 
+                    // Getting the first time analysis for yesterday.
+                    rTvery_productive_percentage = Math.floor(rescueTimeObj[0].very_productive_percentage);
+                    rTproductive_percentage = Math.floor(rescueTimeObj[0].productive_percentage);
+                    rTneutral_percentage = Math.floor(rescueTimeObj[0].neutral_percentage);
+                    rTdistracting_percentage = Math.floor(rescueTimeObj[0].distracting_percentage);
+                    rTvery_distracting_percentage = Math.floor(rescueTimeObj[0].very_distracting_percentage);
+                    console.log("Printing the Rescue time data");
+                    console.log(rTvery_productive_percentage);
+                    console.log(rTproductive_percentage);
+                    console.log(rTneutral_percentage);
+                    console.log(rTdistracting_percentage);
+                    console.log(rTvery_distracting_percentage);
 
-                    /*
-                    for (var i = 0; i < 8; i++) {
-                        console.log("Printing iteration number", i)
-                        // Trying to access movie titles & year details 
-                        console.log("rescueTimeObj[i].id")
-                        console.log(rescueTimeObj[i].id)
-                        // Accessing movie title var movieTitle=t
-                        raktObj[i].movie.title
-                        console.log("accessing movie title")
-                        console.log(movieTitle)
-                        // Accessing movie title var movieYear=t
-                        raktObj[i].movie.year
-                        console.log("accessing movie year")
-                        console.log(movieYear)
-                        // Accessing movie title console.log("accessing .rescueTimeObj[i].movie.id.tmdb")
+                    console.log("end of Rescue Time call");
+                    // drawChart3();
+                    drawChart();
+                    drawChart3();
+                    rescueTimeChart();
+                    rescueTimeChartBar();
+                    // // Load the Visualization API and the corechart package.
+                    // google.charts.load('current', {
+                    //     'packages': ['corechart']
+                    // });
 
-                        var movieTmdbId = rescueTimeObj[i].movie.ids.tmdb
-                        console.log(movieTmdbId)
-                        movieIDTr = movieTmdbId
-                        // Storing movie ID 's in array
-                        movieIDsPath.push(movieIDTr)
-                        movieTitleArr.push(movieTitle)
-                        movieYearArr.push(movieYear)
+                    // // Set a callback to run when the Google Visualization API is loaded.
+                    // google.charts.setOnLoadCallback(drawChart3);
 
 
-                        // Calling the function with user Movie ID
-                        // UserAction(movieIDTr,movieTitle,movieYear)
-                    }
-                    */
+                    // var chart2 = new google.visualization.BarChart(document.getElementById('bar_div'));
+                    // chart2.draw(data2, options2);
 
-                    // console.log("movieIDsPathMediaStreamTrackEvent")
-                    // console.log(movieIDsPath)
+                    function drawChart2() {
+                        // Calling Rescue Time + google Pie chart
+                        var rescueData = new google.visualization.DataTable();
+                        rescueData.addColumn('string', 'Category');
+                        rescueData.addColumn('number', 'Percentage');
 
-                    //You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
-                    // After this stage the synchronous dependency of Movie images & text is already done.
-                    // Display Movie Text
-                    // displayMovieDetails()
+                        // rescueData.addRows([
+                        //     ['Mushrooms', rTvery_productive_percentage],
+                        //     ['Onions', rTproductive_percentage],
+                        //     ['Olives', rTneutral_percentage],
+                        //     ['Zucchini', rTdistracting_percentage],
+                        //     ['Onions', rTvery_distracting_percentage]
+                        // ]);
+                        rescueData.addRows([
+                            ['Mushrooms', 54],
+                            ['Onions', 32],
+                            ['Olives', 23],
+                            ['Zucchini', 21],
+                            ['Onions', 12]
+                        ]);
+                        var rescueTimeChart = {
+                            'title': 'How Much Time I utilize yesterday.',
+                            'width': 600,
+                            'height': 400
+                        };
 
+                        var rescueTimeChart = new google.visualization.PieChart(document.getElementById(
+                            'rescueTimeChartBar_div'));
+                        rescueTimeChart.draw(rescueData, rescueTimeChart);
+                    } // End function drawChart2
+
+                    // drawChart2();
                 }
 
             };
 
             request.send();
 
+        }
+
+
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            var data2 = new google.visualization.DataTable();
+
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data2.addColumn('string', 'Topping');
+            data2.addColumn('number', 'Slices');
+
+            var mushroom = 3;
+            var onions = 2;
+            var mushroom2 = 5;
+            var onions3 = 3;
+            var onions2 = 1.5;
+            var mushroom3 = 2;
+            var onions4 = 4;
+            console.log("In google piechart");
+            data.addRows([
+                ['Mushrooms', mushroom],
+                ['Onions', onions],
+                ['Olives', mushroom2],
+                ['Zucchini', onions3],
+                ['Onions', onions2],
+                ['Olives', mushroom3],
+                ['Zucchini', onions4],
+                ['Pepperoni', 2]
+            ]);
+
+            data2.addRows([
+                ['Mushrooms', mushroom],
+                ['Onions', onions],
+                ['Olives', mushroom2],
+                ['Zucchini', onions3],
+                ['Onions', onions2]
+            ]);
+
+
+            /*
+            var rTvery_productive_percentage = rescueTimeObj[0].very_productive_percentage;
+                    var rTproductive_percentage = rescueTimeObj[0].productive_percentage;
+                    var rTneutral_percentage = rescueTimeObj[0].neutral_percentage;
+                    var rTdistracting_percentage = rescueTimeObj[0].distracting_percentage;
+                    var rTvery_distracting_percentage = rescueTimeObj[0].very_distracting_percentage;
+
+                    */
+
+
+
+            // Set chart options
+            var options = {
+                'title': 'How Much Pizza I Ate Last Night',
+                'width': 400,
+                'height': 300
+            };
+            console.log("In google piechart2");
+
+            var options2 = {
+                'title': 'How Much Food I Ate Last Night',
+                'width': 600,
+                'height': 400
+            };
+            console.log("In google piechart3");
+
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+            // Instantiate and draw our chart, passing in some options.
+            var chart2 = new google.visualization.BarChart(document.getElementById('bar_div'));
+            chart2.draw(data2, options2);
+
+
+            var rescueData2 = new google.visualization.DataTable();
+            rescueData2.addColumn('string', 'Topping');
+            rescueData2.addColumn('number', 'Slices');
+            // rescueData2.addColumn('number', 'Percentage');
+
+            rescueData2.addRows([
+                ['Very_Productive', rTvery_productive_percentage],
+                ['Productive', rTproductive_percentage],
+                ['Neutral', rTneutral_percentage],
+                ['Distracting', rTdistracting_percentage],
+                ['Very_Distracting', rTvery_distracting_percentage]
+            ]);
+            // rescueData2.addRows([
+            //     ['Mushrooms', 54],
+            //     ['Onions', 32],
+            //     ['Olives', 23],
+            //     ['Zucchini', 21],
+            //     ['Onions', 12]
+            // ]);
+            console.log("In drawChart3 google 23 piechart");
+            var rescueTimeOptions = {
+                'title': 'How Much Time I utilize yesterday.',
+                'width': 600,
+                'height': 400
+            };
+
+            var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
+                'rescueTimeChartBar_div'));
+            rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
+
+        }
+
+
+        function drawChart3() {
+            // Calling Rescue Time + google Pie chart
+            var rescueData3 = new google.visualization.DataTable();
+            rescueData3.addColumn('string', 'Topping');
+            rescueData3.addColumn('number', 'Slices');
+            // rescueData2.addColumn('number', 'Percentage');
+
+            // rescueData.addRows([
+            //     ['Mushrooms', rTvery_productive_percentage],
+            //     ['Onions', rTproductive_percentage],
+            //     ['Olives', rTneutral_percentage],
+            //     ['Zucchini', rTdistracting_percentage],
+            //     ['Onions', rTvery_distracting_percentage]
+            // ]);
+            rescueData3.addRows([
+                ['Mushrooms', 54],
+                ['Onions', 32],
+                ['Olives', 23],
+                ['Zucchini', 21],
+                ['Onions', 12]
+            ]);
+            console.log("In drawChart3 google 23 piechart");
+            var rTOptions = {
+                'title': 'How Much Time I utilize yesterday.',
+                'width': 600,
+                'height': 400
+            };
+
+            var rescueTimeChart4 = new google.visualization.PieChart(document.getElementById(
+                'rescueTimeChartBar_div2'));
+            rescueTimeChart4.draw(rescueData3, rTOptions);
+
+
+        }
+
+        function rescueTimeChart() {
+
+            var rescueData2 = new google.visualization.DataTable();
+            rescueData2.addColumn('string', 'Topping');
+            rescueData2.addColumn('number', 'Slices');
+            // rescueData2.addColumn('number', 'Percentage');
+
+            rescueData2.addRows([
+                ['Very_Productive', rTvery_productive_percentage],
+                ['Productive', rTproductive_percentage],
+                ['Neutral', rTneutral_percentage],
+                ['Distracting', rTdistracting_percentage],
+                ['Very_Distracting', rTvery_distracting_percentage]
+            ]);
+            // rescueData2.addRows([
+            //     ['Mushrooms', 54],
+            //     ['Onions', 32],
+            //     ['Olives', 23],
+            //     ['Zucchini', 21],
+            //     ['Onions', 12]
+            // ]);
+            console.log("In drawChart3 google 23 piechart");
+            var rescueTimeOptions = {
+                'title': 'How Much Time I utilize yesterday.',
+                'width': 600,
+                'height': 400
+            };
+
+            var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
+                'rescueTimeChartPie_div3'));
+            rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
+        }
+
+        function rescueTimeChartBar() {
+
+            var rescueData2 = new google.visualization.DataTable();
+            rescueData2.addColumn('string', 'Topping');
+            rescueData2.addColumn('number', 'Slices');
+            // rescueData2.addColumn('number', 'Percentage');
+
+            rescueData2.addRows([
+                ['Very_Productive', rTvery_productive_percentage],
+                ['Productive', rTproductive_percentage],
+                ['Neutral', rTneutral_percentage],
+                ['Distracting', rTdistracting_percentage],
+                ['Very_Distracting', rTvery_distracting_percentage]
+            ]);
+            // rescueData2.addRows([
+            //     ['Mushrooms', 54],
+            //     ['Onions', 32],
+            //     ['Olives', 23],
+            //     ['Zucchini', 21],
+            //     ['Onions', 12]
+            // ]);
+            console.log("In drawChart3 google 23 piechart");
+            var rescueTimeOptions = {
+                'title': 'How Much Time I utilize yesterday.',
+                'width': 600,
+                'height': 400
+            };
+
+            var rescueTimeChart2 = new google.visualization.BarChart(document.getElementById(
+                'rescueTimeChartBar_div3'));
+            rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
         }
     </script>
 </head>
@@ -108,7 +347,11 @@
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
     <div id="bar_div"></div>
+    <div id="rescueTimeChartBar_div"></div>
+    <div id="rescueTimeChartBar_div2"></div>
     <h1> Hello Everybody</h1>
+    <div id="rescueTimeChartPie_div3"></div>
+    <div id="rescueTimeChartBar_div3"></div>
 </body>
 
 </html>
