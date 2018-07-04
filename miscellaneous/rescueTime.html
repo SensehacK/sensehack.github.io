@@ -1,0 +1,99 @@
+<html>
+
+<head>
+
+    <script>
+        movierescueTime();
+
+
+        function movierescueTime() {
+            var request = new XMLHttpRequest();
+            var getRescueTime =
+                "https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN"
+
+            var getRescueTimeX = "https://api.rescueTime.tv/users/sensehack/history/movies/"
+
+            // call url 
+            request.open('GET', getRescueTime);
+            // request.setRequestHeader('Content-Type', 'application/json');
+            // request.setRequestHeader('rescueTime-api-version', '2');
+
+            //  Client ID of Trial 2 cors.io 
+            // request.setRequestHeader('rescueTime-api-key', 'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
+
+            request.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    console.log('Status:', this.status);
+                    console.log('Headers:',
+                        this.getAllResponseHeaders());
+                    console.log('Body:', this.responseText);
+                    //Converting responseText String JSON to Javascript Object JSON.
+                    var rescueTimeJSON = this.responseText;
+                    var movieIDTr = ""
+                    var rescueTimeObj = JSON.parse(rescueTimeJSON)
+                    // Accessing 8 json elements overall
+
+                    console.log("Printing iteration number")
+                    // Trying to access movie titles & year details 
+                    console.log("rescueTimeObj[i].id")
+                    console.log(rescueTimeObj[0].id)
+                    console.log("rescueTimeObj[i].productivity_pulse")
+                    console.log(rescueTimeObj[0].productivity_pulse)
+
+
+                    /*
+                    for (var i = 0; i < 8; i++) {
+                        console.log("Printing iteration number", i)
+                        // Trying to access movie titles & year details 
+                        console.log("rescueTimeObj[i].id")
+                        console.log(rescueTimeObj[i].id)
+                        // Accessing movie title var movieTitle=t
+                        raktObj[i].movie.title
+                        console.log("accessing movie title")
+                        console.log(movieTitle)
+                        // Accessing movie title var movieYear=t
+                        raktObj[i].movie.year
+                        console.log("accessing movie year")
+                        console.log(movieYear)
+                        // Accessing movie title console.log("accessing .rescueTimeObj[i].movie.id.tmdb")
+
+                        var movieTmdbId = rescueTimeObj[i].movie.ids.tmdb
+                        console.log(movieTmdbId)
+                        movieIDTr = movieTmdbId
+                        // Storing movie ID 's in array
+                        movieIDsPath.push(movieIDTr)
+                        movieTitleArr.push(movieTitle)
+                        movieYearArr.push(movieYear)
+
+
+                        // Calling the function with user Movie ID
+                        // UserAction(movieIDTr,movieTitle,movieYear)
+                    }
+                    */
+
+                    // console.log("movieIDsPathMediaStreamTrackEvent")
+                    // console.log(movieIDsPath)
+
+                    //You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
+                    // After this stage the synchronous dependency of Movie images & text is already done.
+                    // Display Movie Text
+                    // displayMovieDetails()
+
+                }
+
+            };
+
+            request.send();
+
+        }
+    </script>
+</head>
+
+<body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+    <div id="bar_div"></div>
+    <h1> Hello Everybody</h1>
+</body>
+
+</html>
