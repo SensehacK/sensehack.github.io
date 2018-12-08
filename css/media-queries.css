@@ -66,6 +66,14 @@
   #resume .main-col {
     padding-right: 5%;
   }
+  /* works Section
+   ------------------------------------------------------------------- */
+   #works h1 {
+    font: 16px/24px 'opensans-bold', sans-serif;
+  }
+  #works .main-col {
+    padding-right: 5%;
+  }
   /* Testimonials Section
    ------------------------------------------------------------------- */
   #testimonials .header-col h1:before {
@@ -238,6 +246,24 @@
   }
   #resume h3,
   #resume .info {
+    text-align: center;
+  }
+
+  /* works Section
+   --------------------------------------------------------------------- */
+   #works .header-col {
+    padding-top: 0;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  #works h1 {
+    letter-spacing: 3px;
+  }
+  #works .main-col {
+    padding-right: 30px;
+  }
+  #works h3,
+  #works .info {
     text-align: center;
   }
   .bars {
