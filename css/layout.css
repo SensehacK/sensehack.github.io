@@ -575,6 +575,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 60%;
   }
@@ -584,6 +585,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 55%;
   }
@@ -593,6 +595,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -602,6 +605,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 90%;
   }
@@ -611,6 +615,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 80%;
   }
@@ -620,6 +625,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -629,6 +635,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 90%;
   }
@@ -638,6 +645,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -647,6 +655,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -656,6 +665,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -665,6 +675,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -674,6 +685,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 60%;
   }
@@ -683,6 +695,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 75%;
   }
@@ -692,6 +705,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -701,6 +715,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 60%;
   }
@@ -710,6 +725,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 55%;
   }
@@ -719,6 +735,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -728,6 +745,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 90%;
   }
@@ -737,6 +755,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 80%;
   }
@@ -746,6 +765,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -755,6 +775,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 90%;
   }
@@ -764,6 +785,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -773,6 +795,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 60%;
   }
@@ -782,6 +805,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -791,6 +815,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 50%;
   }
@@ -800,6 +825,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 60%;
   }
@@ -809,6 +835,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 75%;
   }
@@ -818,6 +845,7 @@ ul#nav li.current a {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -1012,7 +1040,7 @@ ul#nav li.current a {
   margin-left: 24px;
 }
 
-/* fadein/fadeout effect for modal popup
+/* fade in/fade out effect for modal popup
 /* ------------------------------------------------------------------ */
 
 /* content at start */
@@ -1026,7 +1054,7 @@ ul#nav li.current a {
   transition: all 200ms ease-in-out;
 }
 
-/* content fadein */
+/* content fade in */
 
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
   opacity: 1;
@@ -1058,7 +1086,7 @@ ul#nav li.current a {
   color: #95A3A3;
 }
 
-/* trakttvShows Content */
+/* trakt tv Shows Content */
 
 #trakttvShows-wrapper .columns {
   margin-bottom: 36px;
