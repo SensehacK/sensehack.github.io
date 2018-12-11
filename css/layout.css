@@ -322,6 +322,7 @@ ul#nav li.current a {
   font: 18px/24px 'opensans-bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 #resume h1 span {
