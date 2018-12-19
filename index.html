@@ -2260,7 +2260,7 @@
                 console.log(nowPlayingB)
                 var currentPlayingArtist = firstTrack.artist['#text'];
                 var currentPlayingSong = firstTrack.name;
-                var currentPlayText = "Currently playing " + currentPlayingArtist + " - " + currentPlayingSong;
+                var currentPlayText = "Currently playing: " + currentPlayingArtist.bold() + " - " + currentPlayingSong;
                 console.log(currentPlayText);
                 // Now playing logic for element hide
                 if (nowPlayingB) {
