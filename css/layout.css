@@ -488,22 +488,28 @@ ul#nav li.current a {
   border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
+.gaming {
   width: 60%;
-  -moz-animation: photoshop 2s ease;
-  -webkit-animation: photoshop 2s ease;
+  -moz-animation: gaming 2s ease;
+  -webkit-animation: gaming 2s ease;
 }
 
-.illustrator {
+.contribution {
   width: 55%;
-  -moz-animation: illustrator 2s ease;
-  -webkit-animation: illustrator 2s ease;
+  -moz-animation: contribution 2s ease;
+  -webkit-animation: contribution 2s ease;
 }
 
-.wordpress {
+.documentation {
+  width: 55%;
+  -moz-animation: documentation 2s ease;
+  -webkit-animation: documentation 2s ease;
+}
+
+.automation {
   width: 50%;
-  -moz-animation: wordpress 2s ease;
-  -webkit-animation: wordpress 2s ease;
+  -moz-animation: automation 2s ease;
+  -webkit-animation: automation 2s ease;
 }
 
 .css {
@@ -518,10 +524,10 @@ ul#nav li.current a {
   -webkit-animation: html5 2s ease;
 }
 
-.jquery {
+.designing {
   width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  -moz-animation: designing 2s ease;
+  -webkit-animation: designing 2s ease;
 }
 
 .swift {
@@ -572,7 +578,7 @@ ul#nav li.current a {
   -webkit-animation: tWriter 2s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes gaming {
   0% {
     width: 0px;
   }
@@ -582,7 +588,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes illustrator {
+@-moz-keyframes contribution {
   0% {
     width: 0px;
   }
@@ -592,7 +598,17 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes wordpress {
+@-moz-keyframes documentation {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 55%;
+  }
+}
+
+@-moz-keyframes automation {
   0% {
     width: 0px;
   }
@@ -622,7 +638,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes jquery {
+@-moz-keyframes designing {
   0% {
     width: 0px;
   }
@@ -712,7 +728,7 @@ ul#nav li.current a {
   }
 }
 
-@-webkit-keyframes photoshop {
+@-webkit-keyframes gaming {
   0% {
     width: 0px;
   }
@@ -722,7 +738,7 @@ ul#nav li.current a {
   }
 }
 
-@-webkit-keyframes illustrator {
+@-webkit-keyframes contribution {
   0% {
     width: 0px;
   }
@@ -732,7 +748,17 @@ ul#nav li.current a {
   }
 }
 
-@-webkit-keyframes wordpress {
+@-webkit-keyframes documentation {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 55%;
+  }
+}
+
+@-webkit-keyframes automation {
   0% {
     width: 0px;
   }
@@ -762,7 +788,7 @@ ul#nav li.current a {
   }
 }
 
-@-webkit-keyframes jquery {
+@-webkit-keyframes designing {
   0% {
     width: 0px;
   }
