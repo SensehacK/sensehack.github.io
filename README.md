@@ -52,9 +52,15 @@ Feel free to fork this project & raise a pull request to add more relevant infor
 
 ### Personal Links
 
-![alt text][lastFm]
+[![TraktTV](https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/trakttv-48.png)](https://trakt.tv/user/SensehacK)
 
-[lastFm]: https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/lastfm-48.png "Kautilya Save - Sensehack"
+[![LastFm](https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/lastfm-48.png)](https://www.last.fm/user/Sensehack)
+
+[![Spotify](https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/icons8-spotify-48.png)](https://open.spotify.com/user/sensehack)
+
+[![LinkedIn](https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/icons8-linkedin-48.png)](https://www.linkedin.com/in/kautilyasave/)
+
+[![Instagram](https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/icons8/icons8-instagram-48.png)](https://instagram.com/sensehack/)
 
 #### [GitHub](https://github.com/SensehacK)
 
