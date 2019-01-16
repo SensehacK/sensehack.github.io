@@ -45,6 +45,34 @@ Few links for other templates
 | [Spotify](https://www.spotify.com/ "Kautilya Save - Sensehack") |  [Twitter](https://twitter.com/ "Kautilya Save - Sensehack") | [Github Pages](https://pages.github.com/ "Kautilya Save - Sensehack")
 | [Google Charts](https://developers.google.com/chart/ "Kautilya Save - Sensehack")   |    [Google Console](https://search.google.com/search-console "Kautilya Save - Sensehack")   |    [Google Analytics](https://analytics.google.com/analytics/web/ "Kautilya Save - Sensehack") |
 
+## Tools
+
+### Software
+
+#### Code Editor : [Visual Studio Code](https://code.visualstudio.com/ "Kautilya Save - Sensehack")
+
+#### API development environment  : [Postman](https://www.getpostman.com/ "Kautilya Save - Sensehack")
+
+#### Version Control : [Github Desktop](https://desktop.github.com/ "Kautilya Save - Sensehack")
+
+#### Protocols
+
+| [Open Graph](http://ogp.me/ "Kautilya Save - Sensehack") |    [MarkDown Lint](https://github.com/DavidAnson/markdownlint/blob/v0.11.0/doc/Rules.md "Kautilya Save - Sensehack")       | [Open Source Guide](https://opensource.guide/ "Kautilya Save - Sensehack")
+
+### Extensions
+
+[Extensions](https://marketplace.visualstudio.com/VSCode "Kautilya Save - Sensehack") | [VSCode Github](https://github.com/Microsoft/vscode "Kautilya Save - Sensehack")
+
+Dracula Theme | JSON Tools | NPM | HTML Snippets | Intellisense CSS | WakaTime
+
+#### Lint
+
+JSHint | MarkdownLint | Code SpellChecker | XML Tools
+
+#### Previewer
+
+Markdown Preview | HTML Live | Beautify
+
 ## Contribution
 
 Feel free to fork this project & raise a pull request to add more relevant information regarding API's usage & making website code more efficient for quicker loading or encapsulation overall.
@@ -57,4 +85,4 @@ Feel free to fork this project & raise a pull request to add more relevant infor
 
 #### [GitHub](https://github.com/SensehacK)
 
-#### [Sensehack Github Pages](https://sensehack.github.io/)
+#### [Sensehack Pages](https://sensehack.github.io/)
