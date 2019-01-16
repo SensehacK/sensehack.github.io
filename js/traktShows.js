@@ -1,226 +1,293 @@
-var movieImgsPath = []
-var movieIDsPath = []
-var movieTitleArr = []
-var movieYearArr = []
+ /* <!-- 
+    Integrating Trakt TV Show & TMDB  api for history by Sensehack.
+-->
+ */
 
-var outputStrNo = 1;
-var movieTitleStrNo = 1;
-var movieYearStrNo = 1;
 
-movieTrakt()
 
-function movieTrakt() {
-    var request = new XMLHttpRequest();
+ var showImgsPath = []
+ var showIDsPath = []
+ var showTitleArr = []
+ var showEpTitleArr = []
 
-    var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
+ var outputTVStrNo = 1;
+ var showTitleStrNo = 1;
+ var showEpTitleStrNo = 1;
 
-    var getRecentMoviesHistory = "https://api.trakt.tv/users/sensehack/history/movies/"
+ //Default Calling function for Trakt TV shows.
+ showTrakt()
 
-    // call url
-    request.open('GET', getRecentShowsHistory);
+ // Display TV shows Text with timeout.
 
+ // setTimeout(function ()
 
-    request.setRequestHeader('Content-Type', 'application/json');
-    request.setRequestHeader('trakt-api-version', '2');
+ //         {
+ //             console.log("SET TVShow TIMEOUT")
+ //             console.log("Delay by 2 secs")
+ //             showTrakt()
+ //         }, 2000);
 
-    // Client ID of Trial 2 cors.io
-    request.setRequestHeader('trakt-api-key',
-        'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
+ function showTrakt() {
+     console.log("SET function showTrakt() T")
+     var request = new XMLHttpRequest();
 
+     var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
 
-    request.onreadystatechange = function () {
+     var getRecentshowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
 
-        if (this.readyState === 4) {
-            console.log('Status:', this.status);
-            console.log('Headers:', this.getAllResponseHeaders());
-            console.log('Body:', this.responseText);
+     // call url
+     request.open('GET', getRecentShowsHistory);
 
 
-            //Converting responseText String JSON to Javascript Object JSON.
-            var traktJSON = this.responseText;
-            var movieIDTr = ""
-            var traktObj = JSON.parse(traktJSON)
+     request.setRequestHeader('Content-Type', 'application/json');
+     request.setRequestHeader('trakt-api-version', '2');
 
+     // Client ID of Trial 2 cors.io
+     request.setRequestHeader('trakt-api-key',
+         'e76f84733301c6380989637d3c7cc0394f58ae5046b94649d9d65f18e31e43fa');
 
-            //Accessing 8 json elements overall
-            for (var i = 0; i < 8; i++) {
-                console.log("Printing iteration number", i)
 
-                // Trying to access movie titles & year details  
-                console.log("traktObj[i].id")
-                console.log(traktObj[i].id)
+     request.onreadystatechange = function () {
 
-                // Accessing movie title
-                var movieTitle = traktObj[i].movie.title
-                console.log("accessing movie title")
-                console.log(movieTitle)
+         if (this.readyState === 4) {
+             console.log('Status:', this.status);
+             console.log('Headers:', this.getAllResponseHeaders());
+             console.log('Body:', this.responseText);
 
-                // Accessing movie title
-                var movieYear = traktObj[i].movie.year
-                console.log("accessing movie year")
-                console.log(movieYear)
 
-                // Accessing movie title
-                console.log("accessing .traktObj[i].movie.id.tmdb")
-                var movieTmdbId = traktObj[i].movie.ids.tmdb
-                console.log(movieTmdbId)
-                movieIDTr = movieTmdbId
+             //Converting responseText String JSON to Javascript Object JSON.
+             var traktJSON = this.responseText;
+             var showIDTr = ""
+             var traktObj = JSON.parse(traktJSON)
 
-                // Storing movie ID's in array
-                movieIDsPath.push(movieIDTr)
-                movieTitleArr.push(movieTitle)
-                movieYearArr.push(movieYear)
 
+             //Accessing 8 json elements overall
+             for (var i = 0; i < 8; i++) {
+                 console.log("Printing iteration number", i)
 
-                // Calling the function with user Movie ID
-                UserAction(movieIDTr, movieTitle, movieYear)
-            }
+                 // Trying to access show titles & EpTitle details  
+                 console.log("traktObj[i].id")
+                 console.log(traktObj[i].id)
 
-            console.log("movieIDsPathMediaStreamTrackEvent")
-            console.log(movieIDsPath)
+                 // Accessing show title
+                 var showTitle = traktObj[i].show.title
+                 console.log("accessing show title")
+                 console.log(showTitle)
 
-            //You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
-            // After this stage the synchronous dependency of Movie images & text is already done.
-            // Display Movie Text
-            displayMovieDetails()
+                 // Accessing show episode title
+                 var showEpTitle = traktObj[i].episode.title
+                 console.log("accessing show EpTitle")
+                 console.log(showEpTitle)
 
-        }
+                 // Accessing show title
+                 console.log("accessing .traktObj[i].show.id.tmdb")
+                 var showTmdbId = traktObj[i].show.ids.tmdb
+                 console.log(showTmdbId)
+                 showIDTr = showTmdbId
 
-    };
+                 // Storing show ID's in array
+                 showIDsPath.push(showIDTr)
+                 showTitleArr.push(showTitle)
+                 showEpTitleArr.push(showEpTitle)
 
-    request.send();
 
-}
+                 // Calling the function with user show ID
+                 UserActionTV(showIDTr, showTitle, showEpTitle)
+             }
 
-function UserAction(movieIDT, mTitle, mYear) {
+             console.log("showIDsPathMediaStreamTrackEvent")
+             console.log(showIDsPath)
 
-    // Variables 
-    var urlTMDB = "https://api.themoviedb.org/3/movie/"
-    var movieID = movieIDT;
-    var apiKeyTMDB = "?api_key=eab66c078f08232f3a3dec068c6a14d3";
-    var langTMDB = "&language=en-US";
-    var fullUrlTMDB =
-        "https://api.themoviedb.org/3/movie/100402?api_key=eab66c078f08232f3a3dec068c6a14d3&language=en-US";
-    var movieTitle = mTitle;
-    var movieYear = mYear;
+             //You can call whatever you want after the function of API show Details & show Images are retrieved. 
+             // After this stage the synchronous dependency of show images & text is already done.
+             // Display show Text
+             displayshowDetailsTV()
 
-    console.log(movieTitle)
-    console.log(movieYear)
+         }
 
-    var concatTmdbMovieURL = urlTMDB + movieID + apiKeyTMDB + langTMDB
-    console.log("concatTmdbMovieURL urlTMDB + movieID + apiKeyTMDB + langTMDB")
-    console.log(concatTmdbMovieURL)
-    console.log("movieIDT")
-    console.log(movieIDT)
+     };
 
-    // Last FM API Integration Testing
-    fetch(concatTmdbMovieURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (jsonResponse) {
+     request.send();
 
-            console.log(jsonResponse)
-            console.log("type of jsonresponse")
-            console.log(typeof (jsonResponse))
+ }
 
+ function UserActionTV(showIDT, mTitle, mEpTitle) {
 
-            var poster = jsonResponse.poster_path
-            console.log("printing jsonResponse.poster_path")
-            console.log(jsonResponse.poster_path)
-            var imageTMDB = "https://image.tmdb.org/t/p/w342/"
-            var fullImageTMDB = imageTMDB + poster
-            console.log("fullImageTMDB imageTMDB + poster")
-            console.log(fullImageTMDB)
+     // Variables 
+     var urlTMDB = "https://api.themoviedb.org/3/tv/"
+     var showID = showIDT;
+     var apiKeyTMDB = "?api_key=eab66c078f08232f3a3dec068c6a14d3";
+     var langTMDB = "&language=en-US";
+     var fullUrlTMDB =
+         "https://api.themoviedb.org/3/tv/60573?api_key=eab66c078f08232f3a3dec068c6a14d3&language=en-US";
+     var showTitle = mTitle;
+     var showEpTitle = mEpTitle;
 
-            //Adding image paths to the array
-            movieImgsPath.push(fullImageTMDB)
-            console.log("printing in fetch method")
-            console.log(movieTitle)
-            console.log(movieYear)
+     console.log(showTitle)
+     console.log(showEpTitle)
 
-            //Testing Timeout parameter for calling image resources
-            setTimeout(function ()
+     var concatTmdbshowURL = urlTMDB + showID + apiKeyTMDB + langTMDB
+     console.log("concatTmdbshowURL urlTMDB + showID + apiKeyTMDB + langTMDB")
+     console.log(concatTmdbshowURL)
+     console.log("showIDT")
+     console.log(showIDT)
 
-                {
-                    console.log("SET TIMEOUT")
-                    console.log("Delay by 1 secs")
-                    singleImageDisplay(fullImageTMDB);
-                }, 800);
+     // Last FM API Integration Testing
+     fetch(concatTmdbshowURL)
+         .then(function (response) {
+             return response.json();
+         })
+         .then(function (jsonResponse) {
 
+             console.log(jsonResponse)
+             console.log("type of jsonresponse")
+             console.log(typeof (jsonResponse))
 
-            // Important Calling individual function image paths urls from TMDB
-            // singleImageDisplay(fullImageTMDB)
 
+             var posterTV = jsonResponse.poster_path
+             console.log("printing jsonResponse.poster_path")
+             console.log(jsonResponse.poster_path)
+             var imageTMDBTV = "https://image.tmdb.org/t/p/w342/"
+             var fullImageTMDBTV = imageTMDBTV + posterTV
+             console.log("fullImageTMDB imageTMDB + poster")
+             console.log(fullImageTMDBTV)
 
+             //Adding image paths to the array
+             showImgsPath.push(fullImageTMDBTV)
+             console.log("printing in fetch method")
+             console.log(showTitle)
+             console.log(showEpTitle)
 
-        })
+             //Testing Timeout parameter for calling image resources
+             setTimeout(function ()
 
-}
+                 {
+                     console.log("SET TIMEOUT")
+                     console.log("Delay by 1 secs")
+                     singleImageDisplayTV(fullImageTMDBTV)
+                 }, 2000);
 
 
-function singleImageDisplay(imgPath) {
-    var outputStr = "moviePoster"
+             // Old & working just images not appearing properly in order.
+             //Calling individual function image paths urls from TMDB
+             // singleImageDisplayTV(fullImageTMDBTV)
 
-    // Displaying 8 last watch movies images
-    console.log("imageDisplay2(imgPath")
-    console.log(imgPath)
 
-    console.log(outputStr)
-    outputStr = outputStr + outputStrNo;
 
-    console.log("outputStr = outputStr + outputStrNo;")
-    console.log(outputStr)
+         })
 
-    // Incrementing the html tag ID string value
-    outputStrNo = (outputStrNo + 1)
-    console.log("outputStrNo = (outputStrNo + 1)")
-    console.log(outputStrNo)
+ }
 
-    document.getElementById(outputStr).src = imgPath;
 
-}
+ function singleImageDisplayTV(imgPath) {
+     var outputStr = "tvShowPoster"
+     var tvShowBPosterStr = "tvShowBPoster"
+     // Displaying 8 last watch shows images
+     console.log("imageDisplay2(imgPath")
+     console.log(imgPath)
 
+     console.log(outputStr)
+     outputStr = outputStr + outputTVStrNo;
+     tvShowBPosterStr = tvShowBPosterStr + outputTVStrNo;
 
+     console.log("tvShowPoster = tvShowPoster + tvShowPoster;")
+     console.log(outputStr)
+     console.log(tvShowBPosterStr)
 
+     // Incrementing the html tag ID string value
+     outputTVStrNo = (outputTVStrNo + 1)
+     console.log("tvShowPoster = (tvShowPoster + 1)")
+     console.log(outputTVStrNo)
 
-function displayMovieDetails() {
-    for (i = 0; i < 8; i++) {
+     document.getElementById(outputStr).src = imgPath;
+     document.getElementById(tvShowBPosterStr).src = imgPath;
 
-        var movieTitleStr = "movieTitle"
-        var movieYearStr = "movieYear"
+ }
 
-        movieTitleStr = movieTitleStr + movieTitleStrNo
-        movieYearStr = movieYearStr + movieYearStrNo
+ function fullImageDisplayTV() {
+     var outputStrb = "tvShowPoster"
 
-        console.log("movieTitleStr")
-        console.log(movieTitleStr)
-        console.log("movieYearStr")
-        console.log(movieYearStr)
+     // Displaying 8 last watch shows images
+     console.log("fullImageDisplayTV imageDisplay2(imgPath")
 
-        console.log("movieTitleArr[i]")
-        console.log(movieTitleArr[i])
-        console.log("movieYearArr[i]")
-        console.log(movieYearArr[i])
 
-        console.log(typeof (movieTitleArr[i]))
-        console.log(typeof (movieYearArr[i]))
-        console.log(typeof (String(movieYearArr[i])))
+     for (i = 0; i < showImgsPath.count; i++) {
+         var imgPath = showImgsPath[i];
+         outputStrb = outputStrb + (i + 1);
+         console.log("tvShowPoster #############@#@#@##@= tvShowPoster + tvShowPoster;")
+         console.log(outputStrb)
+         console.log(imgPath)
 
-        console.log(typeof (movieTitleStr))
-        console.log(typeof (movieYearStr))
+         document.getElementById(outputStr).src = imgPath;
 
-        //Actual Movie Details
-        document.getElementById(movieYearStr).innerHTML = movieYearArr[i];
-        document.getElementById(movieTitleStr).innerHTML = movieTitleArr[i];
+     }
 
-        // Incrementing the html tag ID string value
-        console.log("// Incrementing the html tag ID string value")
-        movieTitleStrNo = (movieTitleStrNo + 1)
-        movieYearStrNo = (movieYearStrNo + 1)
+ }
 
-    }
 
+ function displayshowDetailsTV() {
+     for (i = 0; i < 8; i++) {
 
+         var showTitleStr = "showTitle"
+         var showEpTitleStr = "showEpTitle"
 
-}
+         showTitleStr = showTitleStr + showTitleStrNo
+         showEpTitleStr = showEpTitleStr + showEpTitleStrNo
+
+         console.log("showTitleStr")
+         console.log(showTitleStr)
+         console.log("showEpTitleStr")
+         console.log(showEpTitleStr)
+
+         console.log("showTitleArr[i]")
+         console.log(showTitleArr[i])
+         console.log("showEpTitleArr[i]")
+         console.log(showEpTitleArr[i])
+
+         console.log(typeof (showTitleArr[i]))
+         console.log(typeof (showEpTitleArr[i]))
+         console.log(typeof (String(showEpTitleArr[i])))
+
+         console.log(typeof (showTitleStr))
+         console.log(typeof (showEpTitleStr))
+
+         //Actual show Details
+         document.getElementById(showEpTitleStr).innerHTML = showEpTitleArr[i];
+         document.getElementById(showTitleStr).innerHTML = showTitleArr[i];
+
+         // Incrementing the html tag ID string value
+         console.log("// Incrementing the html tag ID string value")
+         showTitleStrNo = (showTitleStrNo + 1)
+         showEpTitleStrNo = (showEpTitleStrNo + 1)
+
+     }
+ }
+
+ // onload = reloadPage();
+
+ function reloadPage() {
+     // Trying the webpage reload again.
+     console.log("reloading the page")
+     if (!window.location.hash) {
+         console.log("in the if condition for reload page")
+         window.location = window.location + '#sensehack';
+         //Reinitiating the variables to 1.
+         outputTVStrNo = 1;
+         showTitleStrNo = 1;
+         showEpTitleStrNo = 1;
+
+         //Calling function once again to Make sure image cached are also reused overall.
+         //Which leads to using the cache images synchronously in one order & text + images are in sync.
+         window.location.reload(false);
+
+         // Still as a third backup plan I tried calling fullImageDisplayTV() function but maybe it doesnt work like that.
+         // showTrakt();
+
+
+     }
+
+     // location.reload(false);
+     // fullImageDisplayTV();
+     console.log("reloaded the command page")
+
+ }

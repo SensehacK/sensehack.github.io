@@ -89,6 +89,18 @@
    ================================================== -->
     <script src="js/modernizr.js"></script>
 
+    <!-- Trakt Movies Script
+   ================================================== -->
+    <script src="js/traktMovies.js"></script>
+
+    <!-- Trakt TV Script
+   ================================================== -->
+    <script src="js/traktShows.js"></script>
+
+    <!-- Last FM Script
+   ================================================== -->
+    <script src="js/lastFm.js"></script>
+
     <!-- Favicons
 	================================================== -->
     <link rel="shortcut icon" href="ms1.ico">
@@ -2382,11 +2394,12 @@
     </section>
     <!-- Contact Section End-->
 
+
     <!-- Last Fm Section
    ================================================== -->
     <!-- Integrating Last FM api for scrobbles & history by Sensehack.
     -->
-    <script>
+    <!-- <script>
         var urlLastFm =
             `https://ws.audioscrobbler.com/2.0/
 ?method=user.getrecenttracks
@@ -2455,7 +2468,7 @@
 
 
                     // Getting image[3] for highest quality to showcase
-                    var artistNameSongArr = track.image[3]
+                    var artistNameSongArr = track.image[2]
                     console.log("accessing artistNameSongImage")
                     var artistNameSongImage = artistNameSongArr['#text']
                     console.log(artistNameSongImage)
@@ -2512,13 +2525,13 @@
                 document.getElementById("artistNameSongImage").src = artistNameSongImage;
                 */
             });
-    </script>
+    </script> -->
 
 
     <!-- 
     Integrating Trakt Movies & TMDB  api for history by Sensehack.
 -->
-    <script>
+    <!-- <script>
         var movieImgsPath = []
         var movieIDsPath = []
         var movieTitleArr = []
@@ -2769,14 +2782,14 @@
 
 
         }
-    </script>
+    </script> -->
 
 
 
     <!-- 
     Integrating Trakt TV Show & TMDB  api for history by Sensehack.
 -->
-    <script>
+    <!-- <script>
         var showImgsPath = []
         var showIDsPath = []
         var showTitleArr = []
@@ -3063,7 +3076,7 @@
             console.log("reloaded the command page")
 
         }
-    </script>
+    </script> -->
 
 
     <!-- RescueTime + Google Charts
