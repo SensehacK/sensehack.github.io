@@ -884,13 +884,13 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #social {
-  background: #ebeeee;
+  background: #1F1F1F;
   padding-top: 90px;
   padding-bottom: 60px;
 }
 
 #social h1 {
-  font: 15px/24px 'opensans-semibold', sans-serif;
+  font: 20px/24px 'opensans-semibold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -898,11 +898,126 @@ ul#nav li.current a {
   color: #95A3A3;
 }
 
+#social h2 {
+  font: 18px/24px 'opensans-semibold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: rgb(255, 255, 255);
+}
+
+#social h2 span {
+  font: 15px/24px 'opensans-semibold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: rgb(129, 141, 141);
+}
+
 /* social Content */
 
 #social-wrapper .columns {
   margin-bottom: 36px;
 }
+
+
+/* trakt tv Shows Content */
+
+#lastFmMusic-wrapper .columns {
+  margin-bottom: 36px;
+}
+
+.lastFmMusic-item .item-wrap {
+  background: rgb(31, 31, 31);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.lastFmMusic-item .item-wrap a {
+  display: block;
+  cursor: pointer;
+}
+
+/* overlay */
+
+.lastFmMusic-item .item-wrap .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  background: url(../assets/images/overlay-bg.png) repeat;
+}
+
+.lastFmMusic-item .item-wrap .link-icon {
+  display: block;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+
+.lastFmMusic-item .item-wrap img {
+  vertical-align: bottom;
+}
+
+.lastFmMusic-item .lastFmMusic-item-meta {
+  padding: 18px
+}
+
+.lastFmMusic-item .lastFmMusic-item-meta h5 {
+  font: 14px/21px 'opensans-bold', sans-serif;
+  color: #fff;
+}
+
+.lastFmMusic-item .lastFmMusic-item-meta p {
+  font: 12px/18px 'opensans-light', sans-serif;
+  color: #c6c7c7;
+  margin-bottom: 0;
+}
+
+/* on hover */
+
+.lastFmMusic-item:hover .overlay {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.lastFmMusic-item:hover .link-icon {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
 
 .social-item .item-wrap {
   background: #fff;
@@ -1304,8 +1419,8 @@ call-to-action .button {
 /* g. social two socials one with white background & other with black.
 /* ------------------------------------------------------------------ */
 
-#social {
-  background: #1F1F1F url(../assets/images/social2.jpg) no-repeat center center;
+#social2 {
+  background: #1F1F1F url(../assets/images/social22.jpg) no-repeat center center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
@@ -1315,27 +1430,27 @@ call-to-action .button {
   overflow: hidden;
 }
 
-#social .text-container {
+#social2 .text-container {
   padding-top: 96px;
   padding-bottom: 66px;
 }
 
-#social h1 {
+#social2 h1 {
   font: 18px/24px 'opensans-bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #fff;
 }
 
-#social h1 span {
+#social2 h1 span {
   display: none;
 }
 
-#social .header-col {
+#social2 .header-col {
   padding-top: 9px;
 }
 
-#social .header-col h1:before {
+#social2 .header-col h1:before {
   font-family: 'FontAwesome';
   content: "\f10d";
   padding-right: 10px;
@@ -1348,18 +1463,18 @@ call-to-action .button {
 
 /*	Blockquotes */
 
-#social blockquote {
+#social2 blockquote {
   margin: 0 0px 30px 0px;
   padding-left: 0;
   position: relative;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
 }
 
-#social blockquote:before {
+#social2 blockquote:before {
   content: none;
 }
 
-#social blockquote p {
+#social2 blockquote p {
   font-family: 'librebaskerville-italic', serif;
   padding: 0;
   font-size: 24px;
@@ -1367,7 +1482,7 @@ call-to-action .button {
   color: #fff
 }
 
-#social blockquote cite {
+#social2 blockquote cite {
   display: block;
   font-size: 12px;
   font-style: normal;
@@ -1375,12 +1490,12 @@ call-to-action .button {
   color: #fff;
 }
 
-#social blockquote cite:before {
+#social2 blockquote cite:before {
   content: "\2014 \0020";
 }
 
-#social blockquote cite a,
-#social blockquote cite a:visited {
+#social2 blockquote cite a,
+#social2 blockquote cite a:visited {
   color: #8B9798;
   border: none
 }

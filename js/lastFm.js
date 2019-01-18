@@ -34,7 +34,7 @@
          console.log(nowPlayingB)
          var currentPlayingArtist = firstTrack.artist['#text'];
          var currentPlayingSong = firstTrack.name;
-         var currentPlayText = "Currently playing: " + currentPlayingArtist.bold() + " - " +
+         var currentPlayText = "<span>Currently playing: </span>" + currentPlayingArtist + " - " +
              currentPlayingSong;
          console.log(currentPlayText);
          // Now playing logic for element hide
@@ -48,6 +48,8 @@
          } else {
              console.log("else ssensehack");
              document.getElementById("currentSong1").hidden = true;
+             document.getElementById("songGifPlay").hidden = true;
+
          }
 
 
