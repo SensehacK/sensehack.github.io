@@ -21,7 +21,7 @@ Buy a domain name from any domain registrars. Here is the link for [10 Best Doma
 ### Icons :  [Icons 8](https://icons8.com/ "Kautilya Save - Sensehack")
 
 Images assets play a big role for your overall project. I would recommend **icons8** for your personal or commercial projects as it has plethora of content which can be embedded in your projects.
-[Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack") 
+[Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack")
 [Gfycat](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
 
 Link for Assets

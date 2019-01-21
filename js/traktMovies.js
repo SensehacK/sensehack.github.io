@@ -5,23 +5,23 @@
 
 
 
- var movieImgsPath = []
- var movieIDsPath = []
- var movieTitleArr = []
- var movieYearArr = []
+ var movieImgsPath = [];
+ var movieIDsPath = [];
+ var movieTitleArr = [];
+ var movieYearArr = [];
 
  var outputMovieStrNo = 1;
  var movieTitleStrNo = 1;
  var movieYearStrNo = 1;
 
- movieTrakt()
+ movieTrakt();
 
  function movieTrakt() {
      var request = new XMLHttpRequest();
 
-     var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/"
+     var getRecentShowsHistory = "https://api.trakt.tv/users/sensehack/history/shows/";
 
-     var getRecentMoviesHistory = "https://api.trakt.tv/users/sensehack/history/movies/"
+     var getRecentMoviesHistory = "https://api.trakt.tv/users/sensehack/history/movies/";
 
      // call url
      request.open('GET', getRecentMoviesHistory);
@@ -45,58 +45,58 @@
      request.onreadystatechange = function () {
 
          if (this.readyState === 4) {
-             console.log('Status:', this.status);
-             console.log('Headers:', this.getAllResponseHeaders());
-             console.log('Body:', this.responseText);
+             //  console.log('Status:', this.status);
+             //  console.log('Headers:', this.getAllResponseHeaders());
+             //  console.log('Body:', this.responseText);
 
 
              //Converting responseText String JSON to Javascript Object JSON.
              var traktJSON = this.responseText;
-             var movieIDTr = ""
-             var traktObj = JSON.parse(traktJSON)
+             var movieIDTr = "";
+             var traktObj = JSON.parse(traktJSON);
 
 
              //Accessing 8 json elements overall
              for (var i = 0; i < 8; i++) {
-                 console.log("Printing iteration number", i)
+                 //  console.log("Printing iteration number", i)
 
                  // Trying to access movie titles & year details  
-                 console.log("traktObj[i].id")
-                 console.log(traktObj[i].id)
+                 //  console.log("traktObj[i].id")
+                 //  console.log(traktObj[i].id)
 
                  // Accessing movie title
-                 var movieTitle = traktObj[i].movie.title
-                 console.log("accessing movie title")
-                 console.log(movieTitle)
+                 var movieTitle = traktObj[i].movie.title;
+                 //  console.log("accessing movie title")
+                 //  console.log(movieTitle)
 
                  // Accessing movie title
-                 var movieYear = traktObj[i].movie.year
-                 console.log("accessing movie year")
-                 console.log(movieYear)
+                 var movieYear = traktObj[i].movie.year;
+                 //  console.log("accessing movie year")
+                 //  console.log(movieYear)
 
                  // Accessing movie title
-                 console.log("accessing .traktObj[i].movie.id.tmdb")
-                 var movieTmdbId = traktObj[i].movie.ids.tmdb
-                 console.log(movieTmdbId)
-                 movieIDTr = movieTmdbId
+                 //  console.log("accessing .traktObj[i].movie.id.tmdb")
+                 var movieTmdbId = traktObj[i].movie.ids.tmdb;
+                 //  console.log(movieTmdbId)
+                 movieIDTr = movieTmdbId;
 
                  // Storing movie ID's in array
-                 movieIDsPath.push(movieIDTr)
-                 movieTitleArr.push(movieTitle)
-                 movieYearArr.push(movieYear)
+                 movieIDsPath.push(movieIDTr);
+                 movieTitleArr.push(movieTitle);
+                 movieYearArr.push(movieYear);
 
 
                  // Calling the function with user Movie ID
-                 UserAction(movieIDTr, movieTitle, movieYear)
+                 UserAction(movieIDTr, movieTitle, movieYear);
              }
 
-             console.log("movieIDsPathMediaStreamTrackEvent")
-             console.log(movieIDsPath)
+             //  console.log("movieIDsPathMediaStreamTrackEvent")
+             //  console.log(movieIDsPath)
 
              //You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
              // After this stage the synchronous dependency of Movie images & text is already done.
              // Display Movie Text
-             displayMovieDetails()
+             displayMovieDetails();
 
          }
 
@@ -109,7 +109,7 @@
  function UserAction(movieIDT, mTitle, mYear) {
 
      // Variables 
-     var urlTMDB = "https://api.themoviedb.org/3/movie/"
+     var urlTMDB = "https://api.themoviedb.org/3/movie/";
      var movieID = movieIDT;
      var apiKeyTMDB = "?api_key=eab66c078f08232f3a3dec068c6a14d3";
      var langTMDB = "&language=en-US";
@@ -118,14 +118,14 @@
      var movieTitle = mTitle;
      var movieYear = mYear;
 
-     console.log(movieTitle)
-     console.log(movieYear)
+     //  console.log(movieTitle)
+     //  console.log(movieYear)
 
-     var concatTmdbMovieURL = urlTMDB + movieID + apiKeyTMDB + langTMDB
-     console.log("concatTmdbMovieURL urlTMDB + movieID + apiKeyTMDB + langTMDB")
-     console.log(concatTmdbMovieURL)
-     console.log("movieIDT")
-     console.log(movieIDT)
+     var concatTmdbMovieURL = urlTMDB + movieID + apiKeyTMDB + langTMDB;
+     //  console.log("concatTmdbMovieURL urlTMDB + movieID + apiKeyTMDB + langTMDB")
+     //  console.log(concatTmdbMovieURL)
+     //  console.log("movieIDT")
+     //  console.log(movieIDT)
 
      // Last FM API Integration Testing
      fetch(concatTmdbMovieURL)
@@ -134,31 +134,31 @@
          })
          .then(function (jsonResponse) {
 
-             console.log(jsonResponse)
-             console.log("type of jsonresponse")
-             console.log(typeof (jsonResponse))
+             //  console.log(jsonResponse)
+             //  console.log("type of jsonresponse")
+             //  console.log(typeof (jsonResponse))
 
 
-             var poster = jsonResponse.poster_path
-             console.log("printing jsonResponse.poster_path")
-             console.log(jsonResponse.poster_path)
-             var imageTMDB = "https://image.tmdb.org/t/p/w342/"
-             var fullImageTMDB = imageTMDB + poster
-             console.log("fullImageTMDB imageTMDB + poster")
-             console.log(fullImageTMDB)
+             var poster = jsonResponse.poster_path;
+             //  console.log("printing jsonResponse.poster_path")
+             //  console.log(jsonResponse.poster_path)
+             var imageTMDB = "https://image.tmdb.org/t/p/w342/";
+             var fullImageTMDB = imageTMDB + poster;
+             //  console.log("fullImageTMDB imageTMDB + poster")
+             //  console.log(fullImageTMDB)
 
              //Adding image paths to the array
-             movieImgsPath.push(fullImageTMDB)
-             console.log("printing in fetch method")
-             console.log(movieTitle)
-             console.log(movieYear)
+             movieImgsPath.push(fullImageTMDB);
+             //  console.log("printing in fetch method")
+             //  console.log(movieTitle)
+             //  console.log(movieYear)
 
              //Testing Timeout parameter for calling image resources
              setTimeout(function ()
 
                  {
-                     console.log("SET TIMEOUT")
-                     console.log("Delay by 1 secs")
+                     //  console.log("SET TIMEOUT")
+                     //  console.log("Delay by 1 secs")
                      singleImageDisplay(fullImageTMDB);
                  }, 800);
 
@@ -168,32 +168,32 @@
 
 
 
-         })
+         });
 
  }
 
 
  function singleImageDisplay(imgPath) {
-     var outputStr = "moviePoster"
+     var outputStr = "moviePoster";
      //moviePosterBImage
-     var moviePosterBImgStr = "moviePosterBImage"
+     var moviePosterBImgStr = "moviePosterBImage";
      // Displaying 8 last watch movies images
-     console.log("imageDisplay2(imgPath")
-     console.log(imgPath)
-     console.log(outputStr)
+     //  console.log("imageDisplay2(imgPath")
+     //  console.log(imgPath)
+     //  console.log(outputStr)
 
      // Setting movie Poster images Div tag + number.
      outputStr = outputStr + outputMovieStrNo;
      moviePosterBImgStr = moviePosterBImgStr + outputMovieStrNo;
 
-     console.log("outputStr = outputStr + outputMovieStrNo;")
-     console.log(outputStr)
-     console.log(moviePosterBImgStr)
+     //  console.log("outputStr = outputStr + outputMovieStrNo;")
+     //  console.log(outputStr)
+     //  console.log(moviePosterBImgStr)
 
      // Incrementing the html tag ID string value
-     outputMovieStrNo = (outputMovieStrNo + 1)
-     console.log("outputMovieStrNo = (outputMovieStrNo + 1)")
-     console.log(outputMovieStrNo)
+     outputMovieStrNo = (outputMovieStrNo + 1);
+     //  console.log("outputMovieStrNo = (outputMovieStrNo + 1)")
+     //  console.log(outputMovieStrNo)
 
      //Setting the div tag of moviePoster accordingly.
      document.getElementById(outputStr).src = imgPath;
@@ -207,37 +207,37 @@
  function displayMovieDetails() {
      for (i = 0; i < 8; i++) {
 
-         var movieTitleStr = "movieTitle"
-         var movieYearStr = "movieYear"
+         var movieTitleStr = "movieTitle";
+         var movieYearStr = "movieYear";
 
-         movieTitleStr = movieTitleStr + movieTitleStrNo
-         movieYearStr = movieYearStr + movieYearStrNo
+         movieTitleStr = movieTitleStr + movieTitleStrNo;
+         movieYearStr = movieYearStr + movieYearStrNo;
 
-         console.log("movieTitleStr")
-         console.log(movieTitleStr)
-         console.log("movieYearStr")
-         console.log(movieYearStr)
+         //  console.log("movieTitleStr")
+         //  console.log(movieTitleStr)
+         //  console.log("movieYearStr")
+         //  console.log(movieYearStr)
 
-         console.log("movieTitleArr[i]")
-         console.log(movieTitleArr[i])
-         console.log("movieYearArr[i]")
-         console.log(movieYearArr[i])
+         //  console.log("movieTitleArr[i]")
+         //  console.log(movieTitleArr[i])
+         //  console.log("movieYearArr[i]")
+         //  console.log(movieYearArr[i])
 
-         console.log(typeof (movieTitleArr[i]))
-         console.log(typeof (movieYearArr[i]))
-         console.log(typeof (String(movieYearArr[i])))
+         //  console.log(typeof (movieTitleArr[i]))
+         //  console.log(typeof (movieYearArr[i]))
+         //  console.log(typeof (String(movieYearArr[i])))
 
-         console.log(typeof (movieTitleStr))
-         console.log(typeof (movieYearStr))
+         //  console.log(typeof (movieTitleStr))
+         //  console.log(typeof (movieYearStr))
 
          //Actual Movie Details
          document.getElementById(movieYearStr).innerHTML = movieYearArr[i];
          document.getElementById(movieTitleStr).innerHTML = movieTitleArr[i];
 
          // Incrementing the html tag ID string value
-         console.log("// Incrementing the html tag ID string value")
-         movieTitleStrNo = (movieTitleStrNo + 1)
-         movieYearStrNo = (movieYearStrNo + 1)
+         //  console.log("// Incrementing the html tag ID string value")
+         movieTitleStrNo = (movieTitleStrNo + 1);
+         movieYearStrNo = (movieYearStrNo + 1);
 
      }
      // You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
@@ -247,8 +247,8 @@
      // setTimeout(function ()
 
      //     {
-     //         console.log("SET TIMEOUT")
-     //         console.log("Delay by 1 secs")
+     //         //  console.log("SET TIMEOUT")
+     //         //  console.log("Delay by 1 secs")
      //         showTrakt()
      //     }, 2000);
 

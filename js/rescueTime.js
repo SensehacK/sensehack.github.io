@@ -14,32 +14,32 @@ var rTvery_distracting_percentage;
 function movierescueTime() {
     var request = new XMLHttpRequest();
     var getRescueTime =
-        "https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN"
+        "https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN";
 
     var getRescueTimeX =
-        "https://cors.io/?https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN"
+        "https://cors.io/?https://www.rescuetime.com/anapi/daily_summary_feed?key=B63TFb2EXGglprpQqYrz4zIgChijDRfsZaddbjEN";
 
     // call url 
     request.open('GET', getRescueTimeX);
     request.onreadystatechange = function () {
         if (this.readyState === 4) {
-            console.log('Status:', this.status);
-            console.log('Headers:',
-                this.getAllResponseHeaders());
-            console.log('Body:', this.responseText);
+            //  console.log('Status:', this.status);
+            //  console.log('Headers:',
+            this.getAllResponseHeaders();
+            //  console.log('Body:', this.responseText);
             //Converting responseText String JSON to Javascript Object JSON.
             var rescueTimeJSON = this.responseText;
-            var rescueTimeObj = JSON.parse(rescueTimeJSON)
+            var rescueTimeObj = JSON.parse(rescueTimeJSON);
             // Accessing 8 json elements overall
 
-            console.log("Printing iteration number")
+            //  console.log("Printing iteration number")
             // Trying to access movie titles & year details 
-            console.log("rescueTimeObj[i].id")
-            console.log(rescueTimeObj[0].id)
-            console.log("rescueTimeObj[i].productivity_pulse")
+            //  console.log("rescueTimeObj[i].id")
+            //  console.log(rescueTimeObj[0].id)
+            //  console.log("rescueTimeObj[i].productivity_pulse")
             var rescueTimePulse = rescueTimeObj[0].productivity_pulse;
-            console.log(rescueTimePulse);
-            console.log(rescueTimeObj[0].productivity_pulse)
+            //  console.log(rescueTimePulse);
+            //  console.log(rescueTimeObj[0].productivity_pulse)
 
             // Getting the first time analysis for yesterday.
             rTvery_productive_percentage = Math.floor(rescueTimeObj[0].very_productive_percentage);
@@ -47,19 +47,19 @@ function movierescueTime() {
             rTneutral_percentage = Math.floor(rescueTimeObj[0].neutral_percentage);
             rTdistracting_percentage = Math.floor(rescueTimeObj[0].distracting_percentage);
             rTvery_distracting_percentage = Math.floor(rescueTimeObj[0].very_distracting_percentage);
-            console.log("Printing the Rescue time data");
-            console.log(rTvery_productive_percentage);
-            console.log(rTproductive_percentage);
-            console.log(rTneutral_percentage);
-            console.log(rTdistracting_percentage);
-            console.log(rTvery_distracting_percentage);
+            //  console.log("Printing the Rescue time data");
+            //  console.log(rTvery_productive_percentage);
+            //  console.log(rTproductive_percentage);
+            //  console.log(rTneutral_percentage);
+            //  console.log(rTdistracting_percentage);
+            //  console.log(rTvery_distracting_percentage);
 
-            console.log("end of Rescue Time call");
+            //  console.log("end of Rescue Time call");
 
             // rescueTimeChart();
-            console.log("end of Rescue Time call 1 rescueTimeChart ");
+            //  console.log("end of Rescue Time call 1 rescueTimeChart ");
             // rescueTimeChartBar();
-            console.log("end of Rescue Time call 1 rescueTimeChartBar ");
+            //  console.log("end of Rescue Time call 1 rescueTimeChartBar ");
 
         }
 
@@ -84,7 +84,7 @@ google.charts.setOnLoadCallback(rescueTimeChart);
 
 
 function rescueTimeChart() {
-    console.log("start of rescueTimeChart");
+    //  console.log("start of rescueTimeChart");
     var rescueData2 = new google.visualization.DataTable();
     rescueData2.addColumn('string', 'Topping');
     rescueData2.addColumn('number', 'Slices');
@@ -97,7 +97,7 @@ function rescueTimeChart() {
         ['Distracting', rTdistracting_percentage],
         ['Very Distracting', rTvery_distracting_percentage]
     ]);
-    console.log("In drawChart3 google 23 pie chart");
+    //  console.log("In drawChart3 google 23 pie chart");
     var rescueTimeOptions = {
         'title': 'How Much Time I utilize yesterday.',
         'height': 400
@@ -108,14 +108,14 @@ function rescueTimeChart() {
     var rescueTimeChart2 = new google.visualization.PieChart(document.getElementById(
         'rescueTimeChartPie_div3'));
     rescueTimeChart2.draw(rescueData2, rescueTimeOptions);
-    console.log("end of rescueTimeChart");
+    //  console.log("end of rescueTimeChart");
 
     //Call the bar Function on load.
-    rescueTimeChartBar()
+    rescueTimeChartBar();
 }
 
 function rescueTimeChartBar() {
-    console.log("start of rescueTimeChartBar");
+    //  console.log("start of rescueTimeChartBar");
     var rescueDataBar2 = new google.visualization.DataTable();
     rescueDataBar2.addColumn('string', 'Topping');
     rescueDataBar2.addColumn('number', 'Percent');
@@ -128,7 +128,7 @@ function rescueTimeChartBar() {
         ['Distracting', rTdistracting_percentage],
         ['Very Distracting', rTvery_distracting_percentage]
     ]);
-    console.log("In drawChart3 google 23 bar chart");
+    //  console.log("In drawChart3 google 23 bar chart");
     var rescueTimeBarOptions = {
         'title': 'How Much Time I utilize yesterday.',
         'height': 400
@@ -139,7 +139,7 @@ function rescueTimeChartBar() {
     var rescueTimeChartBar2 = new google.visualization.BarChart(document.getElementById(
         'rescueTimeChartBar_div3'));
     rescueTimeChartBar2.draw(rescueDataBar2, rescueTimeBarOptions);
-    console.log("end of rescueTimeChartBar");
+    //  console.log("end of rescueTimeChartBar");
 }
 
 //  </script>
