@@ -25,9 +25,9 @@ Images assets play a big role for your overall project. I would recommend **icon
 [Gfycat](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
 
 Link for Assets
-[Icon Library Resources.](https://www.keycdn.com/blog/icon-library "Kautilya Save - Sensehack")
-[Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack")
-[abovethenoisefoundation](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
+[Icon Library Resources](https://www.keycdn.com/blog/icon-library "Kautilya Save - Sensehack") | 
+[Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack") | 
+[Abovethenoisefoundation](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
 
 ### Website Template : [Ceevee](https://www.styleshout.com/free-templates/ceevee/ "Kautilya Save - Sensehack")
 
@@ -35,9 +35,7 @@ To promote reusability & save ample of time for your personal projects you could
 
 Few links for other templates
 
-[Colorlib Web Responsive Templates.](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack")
-
-[Mockplus Free HTML5 Responsive Templates.](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
+[Colorlib Web Responsive Templates.](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack")   |   [Mockplus Free HTML5 Responsive Templates.](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
 
 ## Services Integrated
 
