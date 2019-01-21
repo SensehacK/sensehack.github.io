@@ -490,105 +490,80 @@ ul#nav li.current a {
 
 .gaming {
   width: 60%;
-  -moz-animation: gaming 2s ease;
-  -webkit-animation: gaming 2s ease;
+  animation: gaming 2s ease;
 }
 
 .contribution {
   width: 55%;
-  -moz-animation: contribution 2s ease;
-  -webkit-animation: contribution 2s ease;
+  animation: contribution 2s ease;
 }
 
 .documentation {
   width: 55%;
-  -moz-animation: documentation 2s ease;
-  -webkit-animation: documentation 2s ease;
+  animation: documentation 2s ease;
 }
 
 .automation {
   width: 50%;
-  -moz-animation: automation 2s ease;
-  -webkit-animation: automation 2s ease;
+  animation: automation 2s ease;
 }
 
 .css {
   width: 85%;
-  -moz-animation: css 2s ease;
-  -webkit-animation: css 2s ease;
+  animation: css 2s ease;
 }
 
 .html5 {
   width: 80%;
-  -moz-animation: html5 2s ease;
-  -webkit-animation: html5 2s ease;
+  animation: html5 2s ease;
 }
 
 .designing {
   width: 50%;
-  -moz-animation: designing 2s ease;
-  -webkit-animation: designing 2s ease;
+  animation: designing 2s ease;
 }
 
 .swift {
   width: 90%;
-  -moz-animation: swift 2s ease;
-  -webkit-animation: swift 2s ease;
+  animation: swift 2s ease;
 }
 
 .xcode {
   width: 70%;
-  -moz-animation: xcode 2s ease;
-  -webkit-animation: xcode 2s ease;
+  animation: xcode 2s ease;
 }
 
 .ui {
   width: 60%;
-  -moz-animation: ui 2s ease;
-  -webkit-animation: ui 2s ease;
+  animation: ui 2s ease;
 }
 
 .python {
   width: 50%;
-  -moz-animation: python 2s ease;
-  -webkit-animation: python 2s ease;
+  animation: python 2s ease;
 }
 
 .java {
   width: 50%;
-  -moz-animation: java 2s ease;
-  -webkit-animation: java 2s ease;
+  animation: java 2s ease;
 }
 
 .objective {
   width: 60%;
-  -moz-animation: objective 2s ease;
-  -webkit-animation: objective 2s ease;
+  animation: objective 2s ease;
 }
 
 .photography {
   width: 75%;
-  -moz-animation: photography 2s ease;
-  -webkit-animation: photography 2s ease;
+  animation: photography 2s ease;
 }
 
 .tWriter {
   width: 70%;
-  -moz-animation: tWriter 2s ease;
-  -webkit-animation: tWriter 2s ease;
+  animation: tWriter 2s ease;
 }
 
-@-moz-keyframes gaming {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 60%;
-  }
-}
-
-@-moz-keyframes contribution {
+@keyframes contribution {
   0% {
     width: 0px;
   }
@@ -598,7 +573,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes documentation {
+@keyframes documentation {
   0% {
     width: 0px;
   }
@@ -608,7 +583,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes automation {
+@keyframes automation {
   0% {
     width: 0px;
   }
@@ -618,7 +593,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes css {
+@keyframes css {
   0% {
     width: 0px;
   }
@@ -628,7 +603,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes html5 {
+@keyframes html5 {
   0% {
     width: 0px;
   }
@@ -638,7 +613,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes designing {
+@keyframes designing {
   0% {
     width: 0px;
   }
@@ -648,7 +623,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes swift {
+@keyframes swift {
   0% {
     width: 0px;
   }
@@ -658,7 +633,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes java {
+@keyframes java {
   0% {
     width: 0px;
   }
@@ -668,7 +643,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes xcode {
+@keyframes xcode {
   0% {
     width: 0px;
   }
@@ -678,7 +653,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes python {
+@keyframes python {
   0% {
     width: 0px;
   }
@@ -688,7 +663,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes ui {
+@keyframes ui {
   0% {
     width: 0px;
   }
@@ -698,7 +673,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes objective {
+@keyframes objective {
   0% {
     width: 0px;
   }
@@ -708,7 +683,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes photography {
+@keyframes photography {
   0% {
     width: 0px;
   }
@@ -718,7 +693,7 @@ ul#nav li.current a {
   }
 }
 
-@-moz-keyframes tWriter {
+@keyframes tWriter {
   0% {
     width: 0px;
   }
@@ -728,153 +703,13 @@ ul#nav li.current a {
   }
 }
 
-@-webkit-keyframes gaming {
+@keyframes gaming {
   0% {
     width: 0px;
   }
 
   100% {
     width: 60%;
-  }
-}
-
-@-webkit-keyframes contribution {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 55%;
-  }
-}
-
-@-webkit-keyframes documentation {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 55%;
-  }
-}
-
-@-webkit-keyframes automation {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-@-webkit-keyframes css {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@-webkit-keyframes html5 {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 80%;
-  }
-}
-
-@-webkit-keyframes designing {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-@-webkit-keyframes swift {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@-webkit-keyframes xcode {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 70%;
-  }
-}
-
-@-webkit-keyframes ui {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 60%;
-  }
-}
-
-@-webkit-keyframes python {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-@-webkit-keyframes java {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-@-webkit-keyframes objective {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 60%;
-  }
-}
-
-@-webkit-keyframes photography {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 75%;
-  }
-}
-
-@-webkit-keyframes tWriter {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 70%;
   }
 }
 
