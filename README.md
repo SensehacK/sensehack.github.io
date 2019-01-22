@@ -8,7 +8,9 @@ Creating Documentation related to Kautilya Save
 
 Here you can find various documentation related to Kautilya Save & his journey towards his outlook of life.
 
-## Setup
+## [Visit](https://kautilya.design)
+
+## Setup 🖥
 
 ### Host : [Github](https://github.com/ "Kautilya Save - Sensehack")
 
@@ -37,7 +39,7 @@ Few links for other templates
 
 [Colorlib Web Responsive Templates.](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack")   |   [Mockplus Free HTML5 Responsive Templates.](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
 
-## Services Integrated
+## Services Integrated 🔗
 
 ### Current Count : 12 🤓
 
@@ -48,7 +50,7 @@ Few links for other templates
 | [Spotify](https://www.spotify.com/ "Kautilya Save - Sensehack") |  [Twitter](https://twitter.com/ "Kautilya Save - Sensehack") | [Github Pages](https://pages.github.com/ "Kautilya Save - Sensehack")
 | [Google Charts](https://developers.google.com/chart/ "Kautilya Save - Sensehack")   |    [Google Console](https://search.google.com/search-console "Kautilya Save - Sensehack")   |    [Google Analytics](https://analytics.google.com/analytics/web/ "Kautilya Save - Sensehack") |
 
-## Tools
+## Tools 🛠
 
 ### Software
 
@@ -80,9 +82,17 @@ Markdown Preview | HTML Live | Beautify
 
 [EZ Gif](https://ezgif.com/ "Kautilya Save - Sensehack") | [Luna Pic](http://www172.lunapic.com/editor/ "Kautilya Save - Sensehack") | [JSON Lint](https://jsonlint.com/ "Kautilya Save - Sensehack")
 
-## Contribution
+## Download latest stable release 📦
+
+[Click here to download project release for your workstation](https://github.com/SensehacK/SensehacK.github.io/releases)
+
+## Contributions ❤️
 
 Feel free to fork this project & raise a pull request to add more relevant information regarding API's usage & making website code more efficient for quicker loading or encapsulation overall.
+
+## Bugs 💔
+
+Please post any bugs to the [issue tracker](https://github.com/SensehacK/SensehacK.github.io/issues) found on the project's GitHub page. Please include a description of what is not working right with your issue.
 
 ## Authored by : [Kautilya Save](https://kautilya.design)
 
@@ -93,3 +103,5 @@ Feel free to fork this project & raise a pull request to add more relevant infor
 #### [GitHub](https://github.com/SensehacK)
 
 #### [Sensehack Pages](https://sensehack.github.io/)
+
+Thank You!
