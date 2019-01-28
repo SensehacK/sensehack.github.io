@@ -4,11 +4,11 @@
 
 [Kautilya Homepage]: https://github.com/SensehacK/SensehacK.github.io/blob/master/assets/readMe/homepage.png "Kautilya Save - Sensehack"
 
-Creating Documentation related to Kautilya Save
+Documentation related to Kautilya Save
 
 Here you can find various documentation related to Kautilya Save & his journey towards his outlook of life.
 
-## [Visit](https://kautilya.design)
+## [Visit Website](https://kautilya.design)
 
 ## Setup 🖥
 
@@ -20,20 +20,13 @@ First setup your own Github pages under your **``username.github.io``** & get yo
 
 Buy a domain name from any domain registrars. Here is the link for [10 Best Domain Registrars.](https://hostingfacts.com/domain-registrars/ "Kautilya Save - Sensehack")
 
-### Icons :  [Icons 8](https://icons8.com/ "Kautilya Save - Sensehack")
+### Icons
 
-Images assets play a big role for your overall project. I would recommend **icons8** for your personal or commercial projects as it has plethora of content which can be embedded in your projects.
-
-Link for Assets:
-[Icon Library Resources](https://www.keycdn.com/blog/icon-library "Kautilya Save - Sensehack") | [Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack") | [Abovethenoisefoundation](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
+Images assets play a big role for your overall project. I would recommend **Icons 8** for your personal or commercial projects as it has plethora of content which can be embedded in your projects.
 
 ### Website Template : [Ceevee](https://www.styleshout.com/free-templates/ceevee/ "Kautilya Save - Sensehack")
 
 To promote reusability & save ample of time for your personal projects you could always opt in for using open source - community driven projects forking them to your own flavor of preferences.
-
-Few links for other templates
-
-[Colorlib Web Responsive Templates.](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack")   |   [Mockplus Free HTML5 Responsive Templates.](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
 
 ## Services Integrated 🔗
 
@@ -89,6 +82,20 @@ Feel free to fork this project & raise a pull request to add more relevant infor
 ## Bugs 💔
 
 Please post any bugs to the [issue tracker](https://github.com/SensehacK/SensehacK.github.io/issues) found on the project's GitHub page. Please include a description of what is not working right with your issue.
+
+## License
+
+[MIT](https://github.com/SensehacK/SensehacK.github.io//LICENSE)
+
+## Sources and Credits
+
+Link for Assets:
+
+[Icons 8](https://icons8.com/ "Kautilya Save - Sensehack") | [Icon Library Resources](https://www.keycdn.com/blog/icon-library "Kautilya Save - Sensehack") | [Gfycat](https://gfycat.com/hoarsecheapkomododragon "Kautilya Save - Sensehack") | [Abovethenoisefoundation](https://abovethenoisefoundation.org/wp-content/uploads/2018/01/atn-transparent-white-noise3.gif "Kautilya Save - Sensehack")
+
+Few links for other templates
+
+[Colorlib Web Responsive Templates](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack")   |   [Mockplus Free HTML5 Responsive Templates](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
 
 ## Authored by : [Kautilya Save](https://kautilya.design)
 
