@@ -1694,7 +1694,7 @@ call-to-action .button {
 
 footer {
   padding-top: 48px;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; Removed as not needed for showing different background */ 
   color: #303030;
   font-size: 14px;
   text-align: center;
