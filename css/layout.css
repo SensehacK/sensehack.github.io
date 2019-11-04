@@ -262,6 +262,22 @@ ul#nav li.current a {
   border-radius: 100%;
 }
 
+#about .linkedin-pic-verti {
+  position: relative;
+  width: auto;
+  height: auto;
+  border-radius: 100%;
+}
+
+
+#about .linkedin-pic-horiz {
+  position: relative;
+  width: auto;
+  height: auto;
+  border-radius: 100%;
+  display: none;
+}
+
 #about .contact-details {
   width: 41.66667%;
 }

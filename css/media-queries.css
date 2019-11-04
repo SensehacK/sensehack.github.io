@@ -52,6 +52,19 @@
     height: 114px;
     margin-left: 12px;
   }
+
+  #about .linkedlin-pic-verti {
+    width: auto;
+    height: auto;
+    margin-left: 12px;
+  }
+
+  #about .linkedlin-pic-horiz {
+    width: auto;
+    height: auto;
+    margin-left: 12px;
+  }
+
   #about .contact-details {
     width: 50%;
   }
@@ -223,6 +236,15 @@
   #about .profile-pic {
     display: none;
   }
+
+  #about .linkedin-pic-verti {
+    display: none;
+  }
+
+  #about .linkedin-pic-horiz {
+    display: block;
+  }
+
   #about .download .button {
     width: 100%;
     text-align: center;
