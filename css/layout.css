@@ -255,6 +255,10 @@ ul#nav li.current a {
   color: #7A7A7A;
 }
 
+#kautilya {
+  display :none;
+}
+
 #about .profile-pic {
   position: relative;
   width: 120px;
