@@ -8,7 +8,7 @@ Documentation related to Kautilya Save
 
 Here you can find various documentation related to Kautilya Save & his journey towards his outlook of life.
 
-## [Visit Website](https://kautilya.design)
+## [Visit Website](https://sensehack.github.io)
 
 ## Setup 🖥
 
@@ -97,7 +97,7 @@ Few links for other templates
 
 [Colorlib Web Responsive Templates](https://colorlib.com/wp/free-responsive-website-templates/ "Kautilya Save - Sensehack") | [Mockplus Free HTML5 Responsive Templates](https://www.mockplus.com/blog/post/free-responsive-html5-web-design-templates "Kautilya Save - Sensehack")
 
-## Authored by : [Kautilya Save](https://kautilya.design)
+## Authored by : [Kautilya Save](https://sensehack.github.io)
 
 ### Personal Links
 
