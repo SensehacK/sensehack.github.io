@@ -114,6 +114,7 @@ fetch(urlLastFm)
         // document.getElementById(
         //   artistSongNameBImageArr
         // ).src = artistNameSongImage;
+      } else {
         //  console.log("No artistArtworkSongB artwork found")
       }
     }
