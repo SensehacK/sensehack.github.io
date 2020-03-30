@@ -4,8 +4,7 @@
 -->
 */
 
-var urlLastFm =
-    `https://ws.audioscrobbler.com/2.0/
+var urlLastFm = `https://ws.audioscrobbler.com/2.0/
 ?method=user.getrecenttracks
 &user=sensehack
 &limit=8
@@ -13,7 +12,7 @@ var urlLastFm =
 &format=json`;
 
 var url2 =
-    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sensehack&limit=5&api_key=4ba03f783090e2ff9ec08e2a63be196b&format=json";
+  "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sensehack&limit=5&api_key=4ba03f783090e2ff9ec08e2a63be196b&format=json";
 
 fetch(urlLastFm)
     .then(function (response) {
@@ -124,10 +123,15 @@ fetch(urlLastFm)
         }
 
         /*
+        // Commenting below code as we have removed the modal completely.
+        //Setting pop up modal image
+        // document.getElementById(
+        //   artistSongNameBImageArr
+        // ).src = artistNameSongImage;
         //Commenting them as I have removed this div tags.
         // Setting once out of loop.
         document.getElementById("artistNameP1").innerHTML = artistName
         document.getElementById("artistSongNameP1").innerHTML = artistSongName
         document.getElementById("artistNameSongImage").src = artistNameSongImage;
         */
-    });
+  });
