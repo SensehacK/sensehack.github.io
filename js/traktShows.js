@@ -1,4 +1,4 @@
- /* <!-- 
+ /* <!--
     Integrating Trakt TV Show & TMDB  api for history by Sensehack.
 -->
  */
@@ -65,7 +65,7 @@
                  UserActionTV(showIDTr, showTitle, showEpTitle);
              }
 
-             //You can call whatever you want after the function of API show Details & show Images are retrieved. 
+             //You can call whatever you want after the function of API show Details & show Images are retrieved.
              // After this stage the synchronous dependency of show images & text is already done.
              // Display show Text
              displayshowDetailsTV();
@@ -113,14 +113,17 @@
 
  function singleImageDisplayTV(imgPath) {
      var outputStr = "tvShowPoster";
-     var tvShowBPosterStr = "tvShowBPoster";
+    //  var tvShowBPosterStr = "tvShowBPoster";
      outputStr = outputStr + outputTVStrNo;
-     tvShowBPosterStr = tvShowBPosterStr + outputTVStrNo;
+    //  tvShowBPosterStr = tvShowBPosterStr + outputTVStrNo;
 
      // Incrementing the html tag ID string value
      outputTVStrNo = (outputTVStrNo + 1);
+
+     //Setting the div tag of moviePoster accordingly.
+    if (!imgPath.includes("null"))
      document.getElementById(outputStr).src = imgPath;
-     document.getElementById(tvShowBPosterStr).src = imgPath;
+    //  document.getElementById(tvShowBPosterStr).src = imgPath;
  }
 
  function fullImageDisplayTV() {

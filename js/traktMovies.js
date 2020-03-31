@@ -112,18 +112,19 @@
  function singleImageDisplay(imgPath) {
      var outputStr = "moviePoster";
      //moviePosterBImage
-     var moviePosterBImgStr = "moviePosterBImage";
+    //  var moviePosterBImgStr = "moviePosterBImage";
 
      // Setting movie Poster images Div tag + number.
      outputStr = outputStr + outputMovieStrNo;
-     moviePosterBImgStr = moviePosterBImgStr + outputMovieStrNo;
+    //  moviePosterBImgStr = moviePosterBImgStr + outputMovieStrNo;
 
      // Incrementing the html tag ID string value
      outputMovieStrNo = (outputMovieStrNo + 1);
 
-     //Setting the div tag of moviePoster accordingly.
+	 //Setting the div tag of moviePoster accordingly.
+	 if (!imgPath.includes("null"))
      document.getElementById(outputStr).src = imgPath;
-     document.getElementById(moviePosterBImgStr).src = imgPath;
+    //  document.getElementById(moviePosterBImgStr).src = imgPath;
  }
 
 
