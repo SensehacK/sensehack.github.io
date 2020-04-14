@@ -1683,6 +1683,78 @@ call-to-action .button {
   top: 17px;
 }
 
+/* ------------------------------------------------------------------ */
+
+/* h. Changelog Section
+/* ------------------------------------------------------------------ */
+
+#changelog {
+  background: #191919;
+  padding-top: 96px;
+  padding-bottom: 102px;
+  color: #636363;
+}
+
+#changelog .section-head {
+  margin-bottom: 42px;
+}
+
+#changelog h1 {
+  font: 22px/28px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ebeeee;
+  margin-bottom: 6px;
+}
+
+/* #changelog h1 span {
+	display: none;
+} */
+
+#changelog h2 {
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ebeeee;
+  margin-bottom: 6px;
+}
+
+#changelog .info {
+  font: 16px/24px "opensans-light", serif;
+  color: #ebeeee;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#changelog .yearChangelog {
+  font: 18px/36px "opensans-light", sans-serif;
+  margin: 10%;
+}
+
+#changelog h4 {
+  font: 16px/24px "opensans-bold", sans-serif;
+  color: #ebeeee;
+  margin-bottom: 6px;
+}
+
+#changelog .yearChangelog p.lead {
+  font: 18px/36px "opensans-light", sans-serif;
+  padding-right: 3%;
+}
+
+#changelog .header-col {
+  padding-top: 6px;
+}
+
+#changelog label {
+  font: 15px/24px "opensans-bold", sans-serif;
+  margin: 12px 0;
+  color: #ebeeee;
+  display: inline-block;
+  float: left;
+  width: 26%;
+}
+
 /* Twitter Feed */
 
 #twitter {
