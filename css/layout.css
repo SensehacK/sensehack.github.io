@@ -1630,7 +1630,7 @@ call-to-action .button {
   background-color: #11abb0;
 }
 
-#contact button.submit {
+#contact button.message-me {
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #fff;
@@ -1643,7 +1643,7 @@ call-to-action .button {
   margin-left: 26%;
 }
 
-#contact button.submit:hover {
+#contact button.message-me:hover {
   color: #0d0d0d;
   background: #fff;
 }
