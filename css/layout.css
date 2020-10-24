@@ -465,11 +465,16 @@ ul#nav li.current a {
 /*	Skill Bars
 /*----------------------------------------------*/
 
+.skill p {
+  margin: 0 20px;
+  text-align: center;
+}
+
 .bars {
-  width: 95%;
+  width: 80%;
   float: left;
-  padding: 0;
-  text-align: left;
+  padding: 0 30px;
+  text-align: center;
 }
 
 .bars .skills {
