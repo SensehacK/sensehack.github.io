@@ -359,7 +359,7 @@ ul#nav li.current a {
 }
 
 #resume .main-col {
-  padding-right: 10%;
+  padding: 0 10%;
 }
 
 .education,
