@@ -1544,7 +1544,7 @@ call-to-action .button {
   background: #191919;
   padding-top: 96px;
   padding-bottom: 102px;
-  color: #636363;
+  color: #a9a9a9;
 }
 
 #contact .section-head {
@@ -1593,6 +1593,7 @@ call-to-action .button {
 #contact p.lead {
   font: 18px/36px "opensans-light", sans-serif;
   padding-right: 3%;
+  font-weight: 600;
 }
 
 #contact .header-col {
@@ -1697,7 +1698,7 @@ call-to-action .button {
   background: #191919;
   padding-top: 96px;
   padding-bottom: 102px;
-  color: #636363;
+  color: #b8b8b8;
 }
 
 #changelog .section-head {
@@ -1729,6 +1730,7 @@ call-to-action .button {
   color: #ebeeee;
   margin-bottom: 18px;
   margin-top: 9px;
+  font-weight: 700;
 }
 
 #changelog .yearChangelog {
