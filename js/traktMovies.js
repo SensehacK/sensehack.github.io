@@ -66,7 +66,9 @@
              //You can call whatever you want after the function of API Movie Details & Movie Images are retrieved. 
              // After this stage the synchronous dependency of Movie images & text is already done.
              // Display Movie Text
-             displayMovieDetails();
+            //  displayMovieDetails();
+             // Commenting the text assignment as, I don't have time to make an array comprising both image and text.
+             // I believe that asynchronous call made it a bit difficult but all I needed was a closure success or completion handler to work through it.
          }
      };
      request.send();

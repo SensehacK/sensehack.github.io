@@ -68,7 +68,9 @@
              //You can call whatever you want after the function of API show Details & show Images are retrieved.
              // After this stage the synchronous dependency of show images & text is already done.
              // Display show Text
-             displayshowDetailsTV();
+            //  displayshowDetailsTV();
+             // Commenting the text assignment as, I don't have time to make an array comprising both image and text.
+             // I believe that asynchronous call made it a bit difficult but all I needed was a closure success or completion handler to work through it.
          }
      };
      request.send();
