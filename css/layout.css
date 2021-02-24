@@ -1111,7 +1111,8 @@ ul#nav li.current a {
 }
 
 .trakttvShows-item .item-wrap {
-  background: #fff;
+  /* Making the background image div transparent so it doesn't stand out as the core image is transparent. */
+  background: transparent;
   overflow: hidden;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
