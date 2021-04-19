@@ -39,7 +39,7 @@ header {
   width: 100%;
   /* background: #161415 url(../assets/images/header-background.jpg) no-repeat top */
   /* center; */
-  background: #161415 url(../assets/images/dev.png) no-repeat top center;
+  background: #161415 url(../assets/images/dev.png) no-repeat top center !important;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
