@@ -265,10 +265,16 @@ ul#nav li.current a {
 
 #about .profile-pic {
   position: relative;
-  width: 120px;
-  height: 120px;
+  /* width: 120px; */
+  /* height: 120px; */
   border-radius: 100%;
 }
+
+#about .profile-pic img {
+  max-width: 66%;
+  height: auto;
+}
+
 
 #about .linkedin-pic-verti {
   position: relative;
