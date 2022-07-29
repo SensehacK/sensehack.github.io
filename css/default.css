@@ -971,6 +971,12 @@ input[type="checkbox"] {
   text-align: left;
 }
 
+/* column widths center */
+.row .twelveC {
+  width: 100%;
+  text-align: center;
+}
+
 /* Offsets */
 .row .offset-1 {
   margin-left: 8.33333%;
