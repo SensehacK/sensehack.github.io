@@ -965,8 +965,8 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-/* column widths middle */
-.row .twelveC {
+/* column widths Left */
+.row .twelveL {
   width: 100%;
   text-align: left;
 }
